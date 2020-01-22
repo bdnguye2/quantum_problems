@@ -282,100 +282,105 @@ f) What is your best esimate of $\lambda_0$?
 \newpage
 \part{Angular momentum and the H atom}
 \newpage
-\sec{Harmonic Oscillator with \lowercase{$a$} and \lowercase{$a^{\dagger}$}}
+\sec{Ladder operators for the Harmonic Oscillator}
 {\em [Levine prob 5.36]}
-Defining
+Define the raising operator
 
 \be
-a^{\dagger} = \sqrt{\frac{\omega}{x}}(\hat{x} - i\frac{\hat{p}}{\omega})
+a^{\dagger} = \sqrt{\frac{\omega}{2}}\left(\hat{x} - i\frac{\hat{p}}{\omega}\right)
 \ee
 
-for Harmonic Oscillator of frequency $\omega$.
+for a harmonic oscillator of frequency $\omega$ ($\hbar=m=1$). 
 
-a) Find $a$, its Hermitian conjugate.
+a) Find $a$, its Hermitian conjugate, the lowering operator.
 
-b) Find $[a,a^{\dagger}]$
+b) Find their commutator, $[a,a^{\dagger}]$.
 
 c) Write $\hat{H}$ in terms of $a$ and $a^{\dagger}$ and constants.
 
-d) Find $[\hat{H},a^{\dagger}]$ and $[\hat{H},a]$
+d) Find $[\hat{H},a^{\dagger}]$ and $[\hat{H},a]$.
 
 e) Use answer above to show that if $\ket{\phi_{+}} = a^{\dagger}\ket{n}$ where
 $\hat{H}\ket{n}=E_n\ket{n}$, then $\hat{H}\ket{\phi_+} = (E_n+\omega)\ket{\phi_+}$.
-Also show $\ket{\phi_-}=a\ket{n}$ has $\hat{H}\ket{\phi_-} = (E_n-\omega)\ket{\phi_-}$
+Also show $\ket{\phi_-}=a\ket{n}$ has $\hat{H}\ket{\phi_-} = (E_n-\omega)\ket{\phi_-}$.
 
 f) Since there must be a ground state $\ket{0}$, and $a\ket{0}=0$,
-Show $E_0=\frac{\omega}{2}$ and by induction $E_{\text{n}}=(n+\frac{1}{2})\omega$
+show $E_0=\frac{\omega}{2}$ and by induction $E_n=(n+\frac{1}{2})\omega$.
 
-g) Show $aa^{\dagger}=\hat{N}$, $\hat{a}\ket{n} = \sqrt{n+1}\ket{n+1}$, $a\ket{n} = \sqrt{n}\ket{n-1}$
+g) Show $a^{\dagger}a=\hat{N}$, $a^{\dagger}\ket{n} = \sqrt{n+1}\ket{n+1}$, $a\ket{n} = \sqrt{n}\ket{n-1}$
 and writing $a$ in differential form, check
 
 \be
-a \phi_0(x) = 0
+a\, \phi_0(x) = 0
 \ee
 
-is satisfied by the known solution
+is satisfied by the known solution.
 
-h) Find $\bra{0}x\ket{j}$ and $\bra{0}x^2\ket{j}$ without doing integrals
+h) Find $\bra{0}x\ket{j}$ and $\bra{0}x^2\ket{j}$ without doing integrals.
 
-i) Calculate the polarizability of the oscillator directly from perturbation theory
+i) Calculate the polarizability of the oscillator directly from perturbation theory.
 
-j) Calculate $\bra{0}x^4\ket{0}$ without integrals
+j) Calculate $\bra{0}x^4\ket{0}$ without integrals.
 
 \newpage
 \sec{Particle on a Ring}
 {\em [Levine pg 105]}
-Consider particle on a ring of length 1, $\hat{H}=-\frac{1}{2}\frac{\partial^2}{\partial\phi^2}$
-and periodoc boundary conditions $\psi(\phi+2\pi)=\psi(\phi)$
+Consider a particle on a ring of radius 1, so that $\hat{H}=-\frac{1}{2}\frac{\partial^2}{\partial\phi^2}$
+and periodic boundary conditions $\psi(\phi+2\pi)=\psi(\phi)$
 \begin{center}
 \includegraphics[scale=0.5]{particle_ring}
 \end{center}
 
-a) Show that $e^{\pm ikx}$ satisfies the Schr{\"o}dinger equation and $E=\frac{k^2}{2}$
+a) Show that $e^{\pm ikx}$ satisfy the Schr{\"o}dinger equation and $E=\frac{k^2}{2}$.
 
-b) Show boundary conditions ... $k\in\mathbf{1}$ i.e. $k=m=0,\pm1,,\pm2,...$
+b) Show that the boundary conditions imply
+ $k\in\mathbb{Z}$ i.e. $k=m=0,\pm1,,\pm2,...$
 
-c) Sketch the spectrum for the first 4 energy levels, marking degeneracies
+c) Sketch the spectrum for the first 4 energy levels, marking degeneracies.
 
-d) Show that, for $m\neq0$, the eigenfunctions can be chosen to be real
+d) Normalize your eigenfunctions, and show that they are orthogonal to each other.
+
+e) Show that, for $m\neq0$, the eigenfunctions can be chosen to be real
 and give their forms.
+
+f) Show that your real functions are orthonormal. 
 
 \newpage
 \sec{Angular Momentum and Spherical Harmonics}
 {\em [Levine pg 101]}
 Using $\mathbf{L} = \mathbf{r} \times \mathbf{p}$
 
-a) Show (in Cartesians) $\hat{L}_x = -i(x\frac{d}{dz}-z\frac{d}{dy})$ and find
-$\hat{L}_y$ and $\hat{L}_z$
+a) Show (in Cartesians) $\hat{L}_x = -i(y\frac{d}{dz}-z\frac{d}{dy})$ and find
+$\hat{L}_y$ and $\hat{L}_z$.
 
 b) Show $[\hat{L}_x,\hat{L}_y]=i\hbar \hat{L}_z$ and find $[\hat{L}_x,\hat{L}_z]$
-and $[\hat{L}_y,\hat{L}_z]$
+and $[\hat{L}_y,\hat{L}_z]$.
 
 c) Show $[\hat{L}^2,\hat{L}_x] = 0$ and repeat for $[\hat{L}^2,\hat{L}_y]$
-and $[\hat{L}^2,\hat{L}_z]$
+and $[\hat{L}^2,\hat{L}_z]$.
 
 d) If
 \begin{align*}
-\mathbf{L}^2 & = -\hbar\mathbf{\Lambda}^2 \\
+\mathbf{L}^2 & = -\hbar^2\mathbf{\Lambda}^2 \\
 \mathbf{\Lambda}^2 & = \frac{1}{\text{sin}\theta} \frac{\partial}{\partial\theta}(\text{sin}\theta\frac{\partial}{\partial\theta})
-            + \frac{1}{\text{sin}^2\theta}\frac{\partial}{\partial \phi^2}
+            + \frac{1}{\text{sin}^2\theta}\frac{\partial}{\partial \phi^2},
 \end{align*}
 
 show that
 \begin{align*}
-\hat{L}^2Y^m_n(\Omega) = \hbar^2l(l+1)Y^m_l(\Omega)
+\hat{L}^2Y^m_l(\Omega) = \hbar^2l(l+1)Y^m_l(\Omega)
 \end{align*}
 
 where
 \begin{align*}
-Y^m_n(\Omega) = \sqrt{\frac{2l+1}{4\pi}\frac{l-|m|!}{l+|m|!}}
-            P^{|m|}_e(\text{cos}\theta)e^{im\phi}
+Y^m_l(\Omega) = \sqrt{\frac{2l+1}{4\pi}\frac{(l-|m|!)}{(l+|m|!)}}\,
+            P^{|m|}_l(\text{cos}\theta)\, e^{im\phi}
 \end{align*}
 
-and $P^{|m|}_e(x)$ satisfy differential equations for associated Legender
-polynomials
+and $P^{|m|}_e(x)$ satisfy differential equations for the associated Legendre
+polynomials.
 
-e) Show $\hat{L}_zY^m_n(\Omega) = \hbar m Y^m_n(\Omega)$
+e) Show $\hat{L}_zY^m_l(\Omega) = \hbar m Y^m_l(\Omega)$
 
 f) Defining $\hat{L}_{\pm} = \hat{L}_x \pm i\hat{L}_y$, show
 \begin{align*}
@@ -387,21 +392,71 @@ g) Show
 \hat{L}_{\pm}\ket{l,m} = \sqrt{l(l+1)-m(m\pm1)}\ket{l,m\pm1}
 \end{align*}
 
-h) Calculate $\bra{l,m}\hat{L}^2_x\ket{l,m}$ without doing an integral
+h) Calculate $\bra{l,m}\hat{L}^2_x\ket{l,m}$ without doing an integral.
 \newpage
 \sec{Coupling Constant Trick}
-If $\hat{H}=\hat{T} + \lambda\hat{V}$, $V = \frac{dE(\lambda)}{d\lambda}\bigg|_{\lambda=1}$
+If $\hat{H}=\hat{T} + \lambda\hat{V}$, then
+$$V = \frac{dE(\lambda)}{d\lambda}\bigg|_{\lambda=1}$$
 
 a) Check this result for the harmonic oscilator, $\delta$-well, and
-even the particle in a box
+even the particle in a box.
 
 b) Show that this yields the same result as first-order perturbation
-theory
+theory.
 
-c) If $\hat{H}=\hat{H}_0+\lambda\Delta\hat{V}$, show $E = E_0 + \int^1_0 d\lambda\Delta V(\lambda)$
-wher $\Delta V(\lambda) = \bra{\psi_{\lambda}}\Delta\hat{V}\ket{\psi_{\lambda}}$ ({\em Hellmman-Feynman trick})
+c) If $\hat{H}=\hat{H}_0+\lambda\Delta\hat{V}$, show 
+$$E = E_0 + \int^1_0 d\lambda\Delta V(\lambda)$$
+where $\Delta V(\lambda) = \bra{\psi_{\lambda}}\Delta\hat{V}\ket{\psi_{\lambda}}$ ({\em Hellmman-Feynman trick})
 
-d) Check c) for harmonic oscillator and $\delta$-well
+d) Check c) for harmonic oscillator and $\delta$-well.
+
+\newpage
+\sec{Hydrogenic atoms}
+{\em [Levine chapter 6]}
+
+a) For an electron in the ground-state of an H atom, what is $\langle r \rangle$?
+
+b) Repeat (a) for $\langle 1/r \rangle$, but do it without doing an integral.  How is 
+1/$\langle r \rangle$ related to this?  Explain any similarities or differences.
+
+c) What is the most likely distance from the nucleus at which you will find the electron?
+
+d) Within what radius is there exactly a 90\% chance of finding the electron?
+Make a plot of the radial distribution function, and mark all the different separations found in (a)-(d),
+explaining their order in terms of the shape of the plot.
+
+e) How many nodes does a 3p$_x$ orbital have, and which are angular and which are radial?
+
+f) How much energy is needed to ionize an H atom in the 3d state?
+
+g) Explain why there are exactly 14 f electrons.
+
+h) What is the energy and degeneracy of the level containing the 35th excited state of H?
+
+i) In He$^+$, one of the protons instantly becomes a neutron.  What fraction of the electron is still  in the ground state?
+Plot both relevant radial probability densities and rationalize your result.
+
+j) Give a formula for transition frquencies out of the ground-state of He$^+$.
+
+\newpage
+\sec{New tricks on H atom}
+
+a) Sketch the spectrum of the H atom.
+
+b) What does the virial theorem say about the relation between $T$ and $V$ for the 
+H atom?
+
+c) Use a scaled exponential with scale factor $\gamma$ as a trial wavefunction for
+the H atom.  Deduce the energy components without doing any new integrals and plot
+$E(\gamma)$.  Show that its minimum is correct.
+
+d) What is the best possible Gaussian with which to approximate the ground-state
+of the H atom, and what estimate does it give for the ground-state energy?  What 
+is the percentage error in the ionization potential estimate?
+
+e) The cusp condition on the ground-state wavefunction for a nucleus of charge $Z$ is 
+$$\Psi'(0) = - Z\, \Psi(0).$$
+Check tha ground-state wavefunction of a hydrogenic atom satisfies this.
 
 \newpage
 \part{Spin statisics and many-electron atoms}
