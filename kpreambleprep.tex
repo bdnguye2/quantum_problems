@@ -1,0 +1,314 @@
+\documentclass[preprint,superscriptaddress,showpacs,amsmath,amssymb,pra,longbibliography]{revtex4-1}
+
+\usepackage[pdftex]{graphicx} % Include figure files
+\usepackage{dcolumn}  % Align table columns on decimal point
+\usepackage{bm}       % bold math
+\usepackage[usenames,dvipsnames]{color}
+\definecolor{URLCOL}{rgb}{0,0.52,0.83} %external link color
+\definecolor{LINKCOL}{rgb}{0.05,0.5,0} %internal link color
+\definecolor{orange}{rgb}{0.6,0.3,0} %internal link color
+\definecolor{CITECOL}{rgb}{0.25,0,0.48} %link to bibliography
+\usepackage{epstopdf}
+\usepackage{amsmath}
+\usepackage{physics}
+\usepackage[pdftex,bookmarks,breaklinks,bookmarksopen,bookmarksnumbered,colorlinks,linkcolor=LINKCOL,linktocpage,citecolor=CITECOL,urlcolor=URLCOL,pdfpagemode=UseOutline,pdftex]{hyperref}
+
+%colors for chapters and sections
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\chead{file: \jobname}
+\rhead{Total pages: \pageref{page:end}}
+\fancypagestyle{titlepage}
+{\chead{file: \jobname}\rhead{Total pages: \pageref{page:end}}}
+
+%%%%%%%%%%
+
+\newcommand\expgrad{\par\vskip 3ex
+	\hspace{1.55cm}\raggedright{\sf\bfseries Graduation Date (Exp.):}\slshape\space}
+
+%\usepackage[normalem]{ulem}
+\usepackage{booktabs}
+%\usepackage{comment}
+%\usepackage{subfigure}
+\usepackage{natbib}
+%\bibliographystyle{lucas-preprint}
+%\usepackage[ruled]{algorithm2e}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%DEFINITIONS%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%COLORS%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{TITLECOL}{rgb}{0.1,0.2,0.7} %title color
+\definecolor{SECOL}{rgb}{0.1,0.2,0.7} %sec color
+\definecolor{CONTENTSCOL}{rgb}{0.1,0.2,0.7} %can choose the table of contents title to have same color as sec
+\definecolor{SSECOL}{rgb}{0.25,0,0.48} %ssection color
+\definecolor{SSSECOL}{rgb}{0.2,0.08,0.53} %subsubsection color  0.2,0.08,0.53
+\definecolor{FINCOL}{rgb}{0.01,0.3,0.07} %subsubsection color  0.2,0.08,0.53
+
+\def\coltableofcontents{ %table of contents with different colors
+{
+\definecolor{SECOL}{rgb}{0.25,0,0.48} %define secol as the subsection color
+\definecolor{SSECOL}{rgb}{0.2,0.08,0.53} %subsubsection color  0.2,0.08,0.53
+\tableofcontents
+}
+}
+
+\def\ord#1{^{(#1)}} %title color
+\def\sout{_{{\sss S}\text{,out}}}
+\def\gs{^\text{gs}}
+\def\prltitle#1{{\em #1.--}}
+\def\lemma{\prltitle{Lemma}}
+\def\theorem{\prltitle{Theorem}}
+\def\corollary{\prltitle{Corollary}}
+\def\aA{$\mathcal{A}$} %scriptier fellow to denote algorithms
+\def\aB{$\mathcal{B}$}
+%\def\aA{$\mathbb{A}$} %blockier looking fellow, 
+%\def\aB{$\mathbb{B}$}
+\def\adddef{{\em Additional definitions.--}}
+\def\proof{{\em Proof.--}}
+%\def\sin{_{{\sss S}\text{,in}}}
+\def\shd#1{{\bf \color{SSSECOL}#1}} %title color
+\def\check#1{{\color{orange}#1}} %title color
+\def\us{^{\sss S}}
+\def\usec#1{\section*{\textcolor{SECOL}{#1}}}
+
+\def\coloredtitle#1{\title{\textcolor{TITLECOL}{#1}}} %title color
+\def\coloredauthor#1{\author{\textcolor{CITECOL}{#1}}} %author color
+\def\tocname{\textcolor{CONTENTSCOL}{Contents}}
+%\def\tocname{\textcolor{SECOL}{Tables}}
+
+\definecolor{URLCOL}{rgb}{0,0.17,0.43} %external link color
+\definecolor{LINKCOL}{rgb}{0.05,0.4,0} %internal link color
+\definecolor{CITECOL}{rgb}{0.35,0,0.48} %link to bibliography
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%DFT Definitions%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\sss{\scriptscriptstyle\rm}
+
+
+% Equation environments
+\def\bea{\begin{eqnarray}}
+\def\eea{\end{eqnarray}}
+\def\ben{\begin{equation}}
+\def\een{\end{equation}}
+\def\benu{\begin{enumerate}}
+
+
+% Shortcuts for lists
+\def\bei{\begin{itemize}}
+\def\eei{\end{itemize}}
+\def\beit{\begin{itemize}}
+\def\eit{\end{itemize}}
+\def\benu{\begin{enumerate}}
+\def\enu{\end{enumerate}}
+
+% operators and positions
+\def\hatT{{\hat T}}
+\def\hatV{{\hat V}}
+\def\hatH{{\hat H}}
+\def\br{{\bf r}}
+
+%fraction
+\def\half{\frac{1}{2}}
+
+% Standard subscripts
+\def\x{_{\sss X}}
+\def\c{_{\sss C}}
+\def\s{_{\sss S}}
+\def\sj{_{{\sss S},j}}
+\def\szero{_{{\sss S},0}}
+\def\sone{_{{\sss S},1}}
+\def\F{_{\sss F}}
+\def\xc{_{\sss XC}}
+\def\Hx{_{\sss HX}}
+\def\Hxc{_{\sss HXC}}
+\def\H{_{\sss H}}
+%\def\ee{_{\rm ee}}
+
+%standard superscripts
+\def\LDA{^{\rm LDA}}
+\def\CF{_\text{CF}}
+\def\LSD{^{\rm LSD}}
+\def\unif{^{\rm unif}}
+\def\up{_\uparrow}
+\def\dn{_\downarrow}
+\def\HF{^{\rm HF}}
+\def\QC{^{\rm QC}}
+
+
+%integrations
+\def\intr{\int d^3r\,}
+\def\intrp{\int d^3r'\,}
+
+\def\n{n}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%Formatting and Referencing Definitions%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\Tabref#1{Table \ref{#1}}
+\def\Eqsref#1{Eqs.\ \eqref{#1}}
+\def\Eqref#1{Eq.\ \eqref{#1}}
+\def\Secref#1{Section \ref{#1}}
+\def\Figref#1{Fig.\ \ref{#1}}
+\def\Ref#1{Ref.\ \cite{#1}}
+
+\def\mnote#1{\marginpar{\footnotesize\raggedright \textcolor{red}{#1}}}
+\def\oldnew#1#2{%
+\textcolor{blue}{#2}\mnote{old: \textcolor{blue}{#1}}% 
+}
+\def\revision#1{\textcolor{red}{#1}}
+\def\toremove#1{\textcolor{blue}{#1}}
+%\def\toremove#1{\textcolor{green}{\sout{#1}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%Sec definitions%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\def\sec#1{\newpage{\section{\textcolor{SECOL}{#1}}}}
+\def\ssec#1{\subsection{\textcolor{SSECOL}{#1}}}
+\def\sssec#1{\subsubsection{\textcolor{SSSECOL}{#1}}}
+
+\def\e{_\text{e}}
+\def\apx{^\text{apx}}
+\def\apxo{^\text{apx,0}}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\def\Tabref#1{table~\ref{#1}}
+\def\Eqsref#1{Eqs.~\eqref{#1}}
+\def\Eqref#1{Eq.~\eqref{#1}}
+\def\Secref#1{Section~\ref{#1}}
+\def\Figref#1{Fig.~\ref{#1}}
+\def\Pageref#1{p.~\pageref{#1}}
+\def\ftn#1{\footnote{#1}}
+\def\Ref#1{Ref.~\cite{#1}}
+\def\Refs#1{Refs.~\cite{#1}}
+\def\Aref#1{Algorithm~\ref{#1}}
+
+
+\def\itemtxt#1{\item [\textcolor{ITMCOL}{#1:}]}
+%\newtheorem{exercise}{Exercise}
+%\newtheorem{define}{Definition}
+%\newtheorem{theorem}{Theorem}
+\def\bex{\color{EXCOL}\begin{exercise}\color{black}}
+\def\eex{\end{exercise}\color{black}}
+
+%used for tables
+\def\topline{\toprule[0.9pt] }%\addlinespace[2pt]}
+\def\midline{\midrule[0.5pt] }%\addlinespace[2.5pt]}
+\def\eol{\\ }%\addlinespace[2pt]}
+\def\botline{\bottomrule[0.9pt]}
+
+\def\cpar#1{\textcolor{ITMCOL}{\bf #1:}}
+
+\setlength{\marginparwidth}{0.6in}
+\def\mnote#1{\marginpar{\footnotesize\raggedright \textcolor{red}{#1}}}
+
+\def\revision#1{\textcolor{red}{#1}}
+
+
+%nice red: {0.73,0.05,0}
+%nice gold/yellow: {0.8,0.58,0}
+%nice green: {0,0.48,0}
+%nice purple: {0.25,0,0.48} %used for some links
+%nice sky blue: {0,0.52,0.83}
+
+\definecolor{TITLECOL}{rgb}{0.1,0.2,0.7} %title color
+\definecolor{PCOL}{rgb}{0.5,0.06,0.01} %title color
+\definecolor{CHAPCOL}{rgb}{0,0.48,0} %chapter color
+\definecolor{SECOL}{rgb}{0.1,0.2,0.7} %sec color
+\definecolor{CONTENTSCOL}{rgb}{0.1,0.2,0.7} %can choose the table of contents title to have same color as sec
+\definecolor{SSECOL}{rgb}{0.25,0,0.48} %ssection color
+\definecolor{SSSECOL}{rgb}{0.2,0.08,0.53} %subsubsection color  0.2,0.08,0.53
+\definecolor{SHDCOL}{rgb}{0.4,0,0} % heading of section color
+\definecolor{ITMCOL}{rgb}{0.4,0,0} % bulletted text of item color
+\definecolor{EXCOL}{rgb}{0,0.47,0.01} %color of exercises
+\definecolor{DEFCOL}{rgb}{0,0.42,0.01} %color in definitions file for definition headings
+
+
+\def\coltableofcontents{ %table of contents with different colors
+{
+\definecolor{SECOL}{rgb}{0.25,0,0.48} %define secol as the subsection color
+\definecolor{SSECOL}{rgb}{0.2,0.08,0.53} %subsubsection color  0.2,0.08,0.53
+\tableofcontents
+}
+}
+
+\def\coloredtitle#1{\title{\textcolor{TITLECOL}{#1}}} %title color
+\def\coloredauthor#1{\author{\textcolor{CITECOL}{#1}}} %author color
+\def\tocname{\textcolor{CONTENTSCOL}{Contents}}
+%\def\tocname{\textcolor{SECOL}{Tables}}
+
+\definecolor{URLCOL}{rgb}{0,0.17,0.43} %external link color
+\definecolor{LINKCOL}{rgb}{0.05,0.4,0} %internal link color
+\definecolor{CITECOL}{rgb}{0.35,0,0.48} %link to bibliography
+
+
+\definecolor{ngreen}{rgb}{0,0.48,0}
+
+%%%%%%%%%%%%%%%
+%    SECTIONS
+%%%%%%%%%%%%%%%%
+\renewcommand \thesection{\arabic{section}}
+\def\chap#1{\newpage{\part*{\textcolor{CHAPCOL}{#1}}}}
+\def\sec#1{\section{\textcolor{SECOL}{#1}}}
+\def\ssec#1{\subsection{\textcolor{SSECOL}{#1}}}
+\def\sssec#1{\subsubsection{\textcolor{SSSECOL}{#1}}}
+\def\shd#1{\vskip 0.5cm{\color{SHDCOL}{\bf #1:}}}
+\def\sectable#1{
+\addcontentsline{toc}{subsection}{~~Table: \textcolor{SSECOL}{#1}}
+\begin{table}[h]
+\caption{\bf \textcolor{SSECOL}{#1}}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%% SUPPLEMENT %%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\beginsupplement}{%
+        \setcounter{table}{0}
+        \renewcommand{\thetable}{S\arabic{table}}%
+        \setcounter{figure}{0}
+        \renewcommand{\thefigure}{S\arabic{figure}}%
+     }
+
+
+\def\blah{
+blah, blah, blah, blah, blah, blah, blah, blah,
+blah, blah, blah, blah, blah, blah, blah, blah,
+blah, blah, blah, blah, blah, blah, blah, blah,
+blah, blah, blah, blah, blah, blah, blah, blah,
+blah, blah, blah, blah, blah, blah, blah, blah,
+blah, blah, blah, blah, blah, blah, blah, blah,
+blah, blah, blah, blah, blah, blah, blah, blah,
+blah, blah, blah, blah, blah, blah, blah, blah.}
+
+\def\sugpar#1{{\bf #1 :} \blah}
+
+\def\sugfig#1{\vskip 4 cm {\bf Fig Cap #1}}
+
+
+\renewcommand\thesection{\arabic{section}}
+\def\chap#1{\newpage{\part{\textcolor{CHAPCOL}{#1}}}}
+\def\sec#1{\section{\textcolor{SECOL}{#1}}}
+\def\ssec#1{\subsection{\textcolor{SSECOL}{#1}}}
+\def\lssec#1{\subsection*{\textcolor{SSECOL}{#1}}\label{#1}}
+\def\sssec#1{\subsubsection{\textcolor{SSSECOL}{#1}}}
+\def\shd#1{\vskip 0.5cm{\color{SHDCOL}{\bf #1:}}}
+
+\def\uchap#1{\newpage{\part*{\textcolor{CHAPCOL}{#1}}}}
+\def\usec#1{\section*{\textcolor{SECOL}{#1}}}
+\def\ussec#1{\subsection*{\textcolor{SSECOL}{#1}}}
+\def\usssec#1{\subsubsection*{\textcolor{SSSECOL}{#1}}}
+
+\def\sectable#1{
+\addcontentsline{toc}{subsection}{~~Table: \textcolor{SSECOL}{#1}}
+\begin{table}[h]
+\caption{\bf \textcolor{SSECOL}{#1}}
+}
+%\def\sectable#1#2{ \pdfbookmark[2]{#1}{#2} \begin{table}[h]
+%\caption{\bf \textcolor{SSECOL}{ #1}} }
+
+
+
