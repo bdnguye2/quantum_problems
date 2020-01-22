@@ -1,2 +1,2 @@
 # quantum_mech
-quantizing problems
+quantizing quantum problems
