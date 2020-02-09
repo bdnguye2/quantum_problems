@@ -461,76 +461,75 @@ Check that the ground-state wavefunction of a hydrogenic atom satisfies this.
 \newpage
 \part{Spin statisics and many-electron atoms}
 \newpage
-\sec{Two Fermions in a box}
-Consider a 1d infinite well of width $\frac{\pi}{\sqrt{2}}$ containing two electrons
-which do not interact.
+\sec{Ideal fermions in a well}
 
-a) Give the ground state energy, degeneracy, and state its spin.
+Suppose a potential $V(x)$ has exactly 4 bound states, with energies 1,2,4, and
+10 eV below 0, with eigenfunctions $\phi_i$, $i=0..3$.
 
-b) List the 8 lowest energy levels, ignoring statistics. Draw the spectrum.
 
-c) Label your answers in b) by their $S^2$ values and give their degeneracies,
-accounting for spin statistics.
+a) For a single electron of spin $\half$, give the ground state energy, degeneracy, full wavefunction, and spin multiplicity.
+Sketch the energy spectrum, and give the gap and the ionization potential.  List all possible transition frequencies out
+of this state.
 
-d) Draw configuration diagrams for each state in c), and state the level of
-excitation.
+b) List all possible energies in order for two ideal electrons, bound in this well.  Give their terms and state their total
+degeneracies, and draw a spectrum up to (and a little past) the ionization potential.  What is the gap, and the two ionization
+potentials?
 
-e) Imagine turning on a weak repulsion between electrons. How does your
-answer to b) change?
+c) For your answers above, draw configuration diagrams for each state, and say the level of excitation (single, double, etc.).
+Give the full many body wavefunction for all ground and first excited states.
 
-f) Repeat all for 4 electrons.
+d) Redraw (or relabel) your spectrum when there is a weak repulsion between the electrons, marking terms.
 
-g) Repeat all for 3 electrons.
+e) Sketch the absorption spectrum.
+
+f) Repeat for 4 electrons, also distinguishing core from valence excitations.
 
 \newpage
 \sec{He atom with exponential}
-Given $U=\frac{5Z}{8}$ in Hartree for $n(r) = 2|\phi_2(r)|^2$ where
-$\phi_2(r)=\frac{Z^{3/2}}{\sqrt{\pi}} e^{-Z r}$.
+Given $U[n]=5\gamma/4$ in Hartree for $n(r) = 2|\phi_\gamma (r)|^2$ and
+$\phi(r)=exp(-r)/{\sqrt{\pi}}$.
 
 a) Write down $\hat{H}$ for the He atom.
 
 b) Write down the form of $\Psi_0^{\text{HF}}$, including both spatial
 and spin contributions.
 
-c) Use $\phi_2(r)$ as a trial 1s orbital, calculate the one-electron
+c) Using $\phi_2(r)$ as a trial 1s orbital, calculate the one-electron
 energies and electron-electron repulsion. Give the ground state energy
-estimate, and compare with `exact' Hartree Fock value. What is the $\%$
+estimate, and compare with `exact' Hartree Fock value (-79.0 eV). What is the $\%$
 error in ionization potential?
 
-d) Repeat c), but with $\phi_2(r)$ and $Z$ as a variational parameter.
+d) Repeat c), but with $\phi_Z(r)$ and $Z$ as a variational parameter.
 Find the optimum $Z$ using the variational principle. Give the value
-of $Z$ and energy, and $\%$ error in ionization potential.
+of $Z_{eff}$ and energy, and $\%$ error in ionization potential.
 
 e) Check the virial theorem in parts c) and d).
 
-f) Is the sum of the single-particle energies equal to the ground-state
-energy estimate? Explain.
+f) Explain why $Z_{\text{eff}} \neq 2$ and the way in which it differs.
 
-g) Explain why $Z_{\text{opt}} \neq 2$ and the way in which it differs.
-
-h) Repeat for 2nd ionization potential of Li. Is $\%$ error bigger or
+g) Repeat for 2nd ionization potential of Li. Is $\%$ error bigger or
 smaller? Explain.
 
 \newpage
-\sec{He atom with guassian}
-
-a) Repeat the He problem but using a single gaussian trial wavefunction,
-finding its optimal parameter variationally. Find $E_0$ and compare with
-exponential calculation. Explain the difference.
-
-b) By subtracting off the He$^+$ ground state energy, convert exponential
-and guassian calculations into estimates of the ionization potential and
-give the $\%$ errors. Explain the differences.
-
-c) Repeat b) for the gaussian, but do not use exact energy of He$^+$. Instead,
-estimate it with the best gaussian. Is the estimate of ionization potential
-improved or worsened? Explain.
-
-d) Repeat c), but using the same gaussian for both the He and He$^+$ calculations.
-Try both the best one for He, and then the best one for He$^+$. Comment on errors,
-compared to c).
-
-\newpage
+%\sec{He atom with Gaussian}
+%
+%a) Repeat the He problem but using a single gaussian trial wavefunction,
+%finding its optimal parameter variationally. Find $E_0$ and compare with
+%exponential calculation. Explain any difference.
+%
+%b) By subtracting off the He$^+$ ground state energy, convert exponential
+%and gaussian calculations into estimates of the ionization potential and
+%give the $\%$ errors. Explain the differences.
+%
+%c) Repeat b) for the gaussian, but do not use exact energy of He$^+$. Instead,
+%estimate it with the best gaussian. Is the estimate of ionization potential
+%improved or worsened? Explain.
+%
+%d) Repeat c), but using the same gaussian for both the He and He$^+$ calculations.
+%Try both the best one for He, and then the best one for He$^+$. Comment on errors,
+%compared to c).
+%
+%\newpage
 \sec{Iteration}
 Consider $f(x) = \frac{x^6}{6} + \frac{x^2}{2} - x + 3$
 
@@ -539,21 +538,138 @@ a) Deduce an equation that the position of the minimum satisfies.
 Assuming you have a calculator that can take 5th roots, rewrite equation
 in form: $x_m = (...)^{1/5}$.
 
-b) Start with $x^{(0)}_m = 1$, iterate your equation at least 4 times. Find
+b) Start with some  $0 < x^{(0)}_m < 1$, iterate your equation at least 4 times. Find
 $f(x^{(0)}_m)$ at each iteration.
 
 c) By any means you like, find exact answer, and list errors in $x_m$ and
 $f_m$ after each iteration.
 
-d) Repeat starting from $x^{(0)}_m=-2$. Comment on the results.
+d) Repeat starting from a different $x_m$. Comment on the results.
 
-e) Replace $\frac{x^6}{6}$ with $\frac{x^5}{5}$ and try iterating from 1
-and from -2. What happens?
+e) Try starting at $x_m=1$.  What happens? How might you fix things?
 
-f) Plot both the original function and the new function, marking the iteration
-points. What special property does the original function have?
+f) Plot the function, marking the iteration
+points.  Do you notice a property the function has that guarantees
+a minimum and makes it relatively easy to find?
 
 \newpage
+\sec{Spectrum of a Nitrogen atom}
+
+Study the figure of the energy level diagram of a Nitrogen atom.
+\begin{center}
+\includegraphics[scale=0.1]{spectrumN}
+\end{center}
+
+a) What is the ionization potential in Hartree, eV, kcal/mol, and wavenumbers?
+What is the gap (eV)?
+
+b) How many configurations are shown?  List them and give the total degeneracy of each.
+
+c) In which configurations are Hund's rules violated?
+
+d) Which excitations are valence (not Rydberg) excitations?  Which are core excitations?
+Can you find any double excitations?  Explain.
+
+\newpage
+\sec{Addition of angular momenta}
+
+Consider two equivalent $p$ orbitals.
+
+a) How many angular momentum states are there in total, from the separate
+momenta?  List the allowed
+values of total momentum, with their degeneracies, showing the total is the same.
+
+b) What is the state with the largest $\bL$, in both the separate momentum representation
+and the total momentum representation?
+
+c) Use ladder operaters to step down once from the highest state to the first one down,
+and equate the states in one representation with the other.
+
+d) Next, include the spins of the orbitals.   How many states are possible if you
+ignore Pauli exclusion?  If you account for it?  List all the possible terms, and
+then the ones that are allowed.
+
+\def\bJ{{\bf J}}
+\def\bS{{\bf S}}
+e) Finally, writing $\bJ=\bL+\bS$, list the allowed $J$ values for each term, check that you still
+have the same number of states.
+
+f) For the most degenerate term, equate the highest $J$ with corresponding $L$,$S$ states, and then step down one,
+equating states in the two representations.
+\newpage
+\sec{HF and Koopmans theorem}
+
+The ground-state energy of the He atom is -79.0 eV in HF theory.  The
+correlation energy of He is -42 mH.  The eigenvalue in the HF equation
+is -0.918 H.
+
+a) In Hartree, give the HF and exact ground-state energies of He.  What
+is the percent error of the HF energy?  Is the variational principle satisfied?
+
+b) What is the HF energy for He$^+$?  How does this compare with the exact answer?
+
+c) Find the percent error in the HF estimate of the ionization potential.  Explain
+difference with percent error in He energy.   What does the variational principle
+tell you about the HF IP here?
+
+d) Koopmans' 'theorem' says that in HF, IP is approximately equal to the absolute value
+of the HOMO for any electronic system.  Is this approximately true here?  Is
+it exactly true?  Give the percent error of the HF HOMO as an estimate
+of the exact IP energy.  Which is better, the IP from the energy difference
+or the eigenvalue?
+
+e) If we changed from He to Li$^+$, do you expect your percentage error in the
+IP from the energy difference to get larger or smaller?  Justify. 
+\newpage
+\sec{Basis sets}
+
+Given the data set of HF calculations of the H atom and the He atom in different
+basis sets.
+\begin{verbatim}
+  He+        HF     3-21G     -1.9754
+  He+        HF  6-311G**     -1.9981
+  He+        HF    STO-3G     -1.9317
+  He        HF  6-311G**     -2.8599
+  He        HF    STO-3G     -2.8078
+  He        HF     3-21G     -2.8357
+\end{verbatim}
+
+a) Looking at the energies of the H atom, try to arrange the basis sets in order
+of size.
+
+b) Repeat for the He atom case, and say if your answer is consistent with (a).
+
+c) Calculate the errors in the energy due to the basis set for both H and He results.
+
+d) Calculate the IP of He within HF in each of the given basis sets.
+
+e) Calculate the errors in the IP results, and compare with the energy errors in (c).
+Explain any patterns.
+
+f) Does the variational principle tell you anything about the basis-set error in the IP?
+
+g) Given the actual IP of He is 24.6 eV, which basis-set gives the most accurate estimate?
+Why might someone say "two wrongs do not make a right"?
+\newpage
+\sec{Problems from Berry, Rice, and Ross}
+
+a) Do problems 10, 12, 14, 15, and 18 from BRR.   For reference data, use the NIST website,
+Atomic Spectra Database. (This replaced Moore's tables, and the NBST became NIST).
+Also check out the Computational Chemistry Comparison and Benchmark DataBase (cccbdb)
+from which I got some of the basis-set results.
+
+b) Deduce formulas for the atomic number of the noble gas atom
+of the $n$-th row, and for the width of the $n$-th row.  Ignoring
+relativity, in what row would the atom with 252 electrons be and
+what is its ground-state configuration?  What would be its lowest
+energy term?
+
+c) Repeat (b) but with repulsion between electrons turned off, i.e.,
+purely hydrogenic orbitals and energies.
+
+
+\newpage
+
 \part{Diatomics and quantum theorems}
 \newpage
 \part{Electronic stucture theory}
@@ -4215,3 +4331,4 @@ To prevent this energy expression from diverging at light speed, we see that the
 \label{page:end}
 \end{document}
 \newpage
+
