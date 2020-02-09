@@ -1,0 +1,164 @@
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsthm} %lets us use \begin{proof}
+\usepackage{amssymb} %gives us the character \varnothing
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{braket}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{mathtools}
+
+\title{Chem231B: Assignment \#3} % Title of the assignment
+
+\begin{document}
+
+\maketitle
+
+\section*{Problems from Berry, Rice, and Ross}
+
+a) Do problems 10, 12, 14, 15, and 18 from BRR. For reference data,
+use the NIST website, Atomic Spectra Database. (This replaced Moore’s
+tables, and the NBST became NIST). Also check out the Computational Chemistry
+Comparison and Benchmark DataBase (cccbdb) from which I got some of the
+basis-set results.
+\\
+
+10) Put entries in the following sets of configurations in order of
+increasing energy. Then check your intuition with experimental results
+at NIST Spectra Database.
+
+\textcolor{red}{a) Li, $1s^22s, 1s2s^2, 1s^22p, 1s2s2p$}
+\\
+
+\textcolor{red}{b) C, $1s^22s^22p^2, 1s^22s2p^3, 1s^22s^22p3s, 1s2s^22p^3$}
+\\
+
+12) Explain why the second ionization potentail of lithium for the
+process Li$^+$ \rightarrow $\text{Li}^{2+}$ + $e^-$, is less than that predicted for
+a hydrogenlike atom with $Z=3$.
+
+\textcolor{red}{The electronic repulsion from the two electrons within lithium
+  ion leads to smaller second ionization potential than predicted by a hydrogenlike
+  atom which only has one electron.}
+\\
+
+14) The outer electron of an alkali atom may be treated in an approximate way,
+as if it were in a hydrogenic orbital. Suppose that one takes the quantum number
+for the outer electron to be 2, 3, 4, 5, and 6, respectively, for Li, Na,
+K, Rb, and Cs. What values must $Z$ be given to account for the observed
+first ionization potentials of these atoms? Explain why they differ from unity.
+
+\textcolor{red}{Look up first ionization potential (IP) energy on NIST and solve
+  for $Z$ within the Rydberg equation where the HOMO may be taken as the IP energy
+  from Koopman's Theorem.}
+\\
+
+\textcolor{red}{For lithium atom, the ionization potential energy is 5.3917eV}
+\\
+
+\textcolor{red}{
+\begin{align*}
+  \frac{13.6 Z^2}{2^2} & = 5.3917 \\
+  Z^2 & = \frac{4*5.3917}{13.6} \\
+  Z  & = \{\pm 1.259\}
+\end{align*}
+}
+
+\textcolor{red}{$Z$ value for lithium is 1.259. Repeat for Na, K, Rb, and Cs}
+
+\begin{table}[hbpt]
+  \centering
+  \begin{tabular}{cc}
+    Atom & $Z$ \\
+    \hline
+    Li & 1.259 \\
+    Na & 1.229\\
+    K  & 1.130 \\
+    Rb & 1.108 \\
+    Cs & 1.070
+  \end{tabular}
+\end{table}
+
+\textcolor{red}{When $Z=1$, this indicates an unscreened electron from the
+  hydrogen atom. The $Z$ values are differ from unity because the nuclear attraction
+  is increasing while at the same time, the screening effect does not exactly
+  cancel with the attraction.}
+\\
+
+15) Use the Pauli exclusion principle and Hund's rules to find the number
+of unpaired electrons and the term of lowest energy for the following atoms.
+
+\textcolor{red}{a) P: [Ne]$3s^23p^3$; $L=0$ and $S=\frac{3}{2}$ and $J=L+S=\frac{3}{2}$;
+  Term Symbol: $^4S_{\frac{3}{2}}$}
+\\
+
+\textcolor{red}{b) S: [Ne]$3s^23p^4$; $L=1$ and $S=1$ and $J=2$;
+  Term Symbol: $^3P_2$}
+\\
+
+\textcolor{red}{c) Ca: [Ar]$4s^2$; $L=0$ and $S=0$ and $J=0$;
+  Term Symbol: $^1S_0$}
+\\
+
+\textcolor{red}{d) Br: [Ar]$4s^23d^{10}4p^5$; $L=1$ and $S=\frac{1}{2}$
+  and $J=\frac{3}{2}$; Term Symbol: $^2P_{\frac{3}{2}}$}
+\\
+
+\textcolor{red}{e) Fe: [Ar]$4s^23d^6$; $L=2$ and $S=2$ and $J=4$;
+  Term Symbol: $^5D_4$}
+\\
+
+18) Derive the terms of the configuration $1s^22s^22p^63s^23p3d$,
+of the silicon atom.
+
+\textcolor{red}{$S=1$ and $L=3$ and $J=\{2,3,4\}$;
+  Term Symbols: $^3F_2, ^3F_3, ^3F_4$}
+\\
+
+\noindent b) Deduce formulas for the atomic number of the noble gas
+atom of the n-th row, and for the width of the n-th row. Ignoring relativity,
+in what row would the atom with 252 electrons be and what is its
+ground-state configuration? What would be its lowest energy term?
+
+\begin{table}[hbpt]
+  \center
+  \begin{tabular}{ccc}
+    Row & Width & Atomic Number \\
+    \hline
+    1 & 2 & 2 \\
+    2 & 8 & 10 \\
+    3 & 8 & 18 \\
+    4 & 18& 36 \\
+    5 & 18& 54 \\
+    6 & 32& 86 \\
+    7 & 32& 118
+  \end{tabular}
+\end{table}
+
+\textcolor{red}{Keeping with the existence of $f$-orbitals since
+  $g$-orbitals have not been discovered yet. After the 6th row,
+  add 32 electrons for the next noble gas atom. This will mean that the
+  11-th row will be where the atom with 252 electrons is placed.}
+\\
+
+\noindent\textcolor{red}{$e^-$ configuration: [$^{246}$Noble Gas]$11s^29f^4$
+  \\
+  $S=2$ and $L=6$ and $J=4$; Term Symbol: $^5I_4$}
+\\
+
+\noindent c) Repeat (b) but with repulsion between electrons turned off,
+i.e., purely hydrogenic orbitals and energies.
+
+\textcolor{red}{If there's no electron interactions, lower quantum
+  number orbitals will be filled first e.g. $3d$ orbitals are filled before
+  $4s$ orbitals.}
+\\
+
+\noindent\textcolor{red}{$e^-$ configuration: [$^{246}$Noble Gas]$9f^6$
+  \\
+  $S=3$ and $L=3$ and $J=6$; Term Symbol: $^7F_6$}
+
+\end{document}
