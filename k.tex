@@ -675,6 +675,60 @@ might be occupied?
 
 \part{Diatomics and quantum theorems}
 \newpage
+\sec{Born-Oppenheimer approximation}
+
+Consider a one-dimensional world with a proton of mass $m$ and an electron of mass 1, $m >> 1$.
+Let the potential be
+$$V(X,x)= \half (X^2+x^2) + \half (x-X)^2, $$
+where $X$ is the position of the proton, $x$ is that of the electron.
+
+a) Making the BO approximation, write the purely electronic Hamiltonian and, by completing the
+square, write its energy levels, $E_{el,n}(X)$.
+
+b) Write the nuclear equation for the proton in the field of the electronic energy plus any other
+parts of the potential,
+to get an expression for the total energy of the system, $E_{\nu,n}$, where $\nu$ is
+the quantum number for proton vibrations.
+
+c) Assuming $m=25$, plot the lowest 12 levels, labelling them with their electronic 
+and nuclear quantum numbers.
+
+d) The exact solution to this problem is given by the sum of two harmonic oscillators, with frequencies
+$$\omega_\pm = 1 +\frac{1}{m} \pm {\sqrt{1-\frac{1}{m}+\frac{1}{m^2}}}$$.
+Show that, if $m>>1$, this agrees with your BO solutions above.
+
+e) Plot the exact energy levels and compare with the BO solution. Plot the errors
+of the BO energies as a function of energy.  How accurate is BO for the lowest
+energy state?  Does the accuracy depend on where you are in the spectrum?
+
+f) Repeat your calculation for $m=27$, and comment on the errors in the BO states near
+the first electronic excitation.  In particular, comment on  (near)-degeneracies.
+
+\newpage
+\sec{H$_2^+$}
+
+The matrix elements in the calculation of the energy levels of H$_2^+$ are $S= \exp(-x)(1+x+x^2/3)$,
+$h_{AA}=\gamma^2/2-\gamma f(x)$, where $f=1-((1+x)\exp(-2 x)-1)/x$, and
+$h_{AB}=-\gamma^2 s/2-\gamma (2-\gamma) \exp(-x)(1+x)$, where $x=\gamma*R$.
+Here $\gamma$ is the scale factor for the 1s orbitals on each proton, separated by $R$.
+
+a) Write formulas for the energy levels of the bonding and anti-bonding orbitals, $\epsilon_\pm$
+
+b) For $\gamma=1$, plot $s$, $h_{AA}$, and $h_{AB}$ as a function of $R$.   Explain their
+behavior as $R\to \infty$, as $R\to 0$, and their shapes.
+
+c) Repeat previous question for $\epsilon_\pm(R)$, using your insight from those answers.
+Then add the nuclear repulsion and plot both energy levels.  Deduce the bond length and well-depth
+$D_e$ for this approximate calculation.   
+
+d) Repeat (b+c) using $\gamma=1+1/2^R$, but only for the lower curve.  
+Plot all quantities on the same plots as before, and explain all differences.
+Calculate bond length and depth.
+Compare with exact answers (google or NIST).
+
+
+\newpage
+
 \part{Electronic stucture theory}
 \label{page:end}
 \end{document}
