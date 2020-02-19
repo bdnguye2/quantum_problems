@@ -1,0 +1,177 @@
+\documentclass{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsthm} %lets us use \begin{proof}
+\usepackage{amssymb} %gives us the character \varnothing
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{braket}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{mathtools}
+\usepackage{diagbox}
+
+\title{Chem231B: Hw 4} % Title of the assignment
+
+\begin{document}
+
+\maketitle
+
+\section*{\textbf{BO Approx}}
+
+a) Making the BO approximation, write the purely electronic Hamiltonian and, by
+completing the square, write its energy levels $E_{\text{el,n}}(X)$.
+
+\begin{equation}
+  \hat{H}_{\text{el}} = \hat{T}_{\text{el}} + V(X,x)
+\end{equation}
+
+Given: $V(X,x) = \frac{1}{2}(X^2+x^2) + \frac{1}{2}(x-X)^2$
+
+Rearrange $V(X,x)$ and completing the square,
+\begin{align}
+  V(X,x) & = \frac{1}{2}(X^2+x^2) + \frac{1}{2}(x-X)^2 \nonumber \\
+  & = \frac{1}{2}X^2+\frac{1}{2}x^2 + \frac{1}{2}(x^2-2xX+X^2) \nonumber \\
+  & = X^2 + x^2 - xX + 2xX - 2xX \nonumber\\
+  & = (x - X)^2 + xX.
+\end{align}
+
+Hence, the purely electronic Hamiltonian is,
+\begin{align}
+  \hat{H}_{\text{el}} & = \hat{T}_{\text{el}} + V(X,x) \nonumber\\
+  & = \frac{p_x^2}{2} + (x - X)^2 + xX,
+\end{align}
+
+where $p_x$ is momentum operator for the electron. The Sch\"odinger equation
+for the electronic part,
+\begin{align}
+  \hat{H}_{\text{el}}\phi_{\text{el}}(x) & = E_{\text{el,n}}\phi_{\text{el}}(x) \\
+  \Bigg(\frac{p_x^2}{2} + (x - X)^2 + xX\Bigg)\phi_{\text{el}}(x)
+  & =E_{\text{el,n}}(X)\phi_{\text{el}}(x). \label{eqn:elec}
+\end{align}
+
+This looks like the harmonic oscillator problem but with an additional
+coupled $xX$ term and proton position $X$ in the $(x-X)^2$ term.
+The harmonic oscillator wavefunctions are solutions to Eqn \eqref{eqn:elec}.
+For convenience, we rewrite $(x-X)^2=(1/2)(2)(x-X)^2$ and this shows that
+$\omega_{\text{el}}=\sqrt{2}$. Throughout the problem, $\omega_{\text{el}}$ will be used
+and substituted later. The energy levels $E_{\text{el,n}}(X)$ are determined for $n=0,1$
+and then generalized to $n$ levels. At $n=0$,
+\begin{align}
+  \phi_{\text{el,0}}(x) & = \Bigg(\frac{\omega_{\text{el}}}{\pi}\Bigg)^{\frac{1}{4}}
+  e^{-\omega_{\text{el}}x^2/2} \\
+  E_{\text{el,0}} & = \langle \hat{T}_{\text{el}}\rangle + \langle V(X,x) \rangle \nonumber \\
+  & = \frac{\omega_{\text{el}}}{4} + \frac{\omega_{\text{el}}}{4}(1+2X^2\omega_{\text{el}}) \nonumber\\
+  & = \frac{\omega_{\text{el}}}{2} + \frac{X^2\omega_{\text{el}}^2}{2}.
+\end{align}
+
+Repeat for $n=1$,
+\begin{align}
+  \phi_{\text{el,1}}(x) & = \Bigg(\frac{\omega_{\text{el}}}{\pi}\Bigg)^{\frac{1}{4}}
+  \sqrt{2\omega_{\text{el}}}\,e^{-\omega_{\text{el}}x^2/2} \\
+  E_{\text{el,1}} & = \frac{3\omega_{\text{el}}}{2} + \frac{X^2\omega_{\text{el}}^2}{2}.
+\end{align}
+
+Therefore, $E_{\text{el,n}}(X)=(n+\frac{1}{2})\omega_{\text{el}} + \frac{X^2\omega_{\text{el}}^2}{2}$.
+\\
+
+\noindent b) Write the nuclear equation for the proton in the field of the
+electronic energy plus any other parts of the potential, to get an expression
+for the totla energy of the system, $E_{\nu,n}$, where $\nu$ is the quantum
+number for proton vibrations.
+\\
+
+Given the full Hamiltonian ($\hat{H}$), the full wavefunction ($\Psi(x,X)$),
+and the Schr\"odinger equation,
+\begin{align}
+  \hat{H}\Psi(x,X) & = E_{\text{tot}}\Psi(x,X) \\
+  \Psi(x,X) & = \phi_{\text{el}}(x)\phi_{\text{nuc}}(X) \\
+  \hat{H} & = \hat{T}_{\text{nuc}} + \hat{T}_{\text{el}} + V(X,x).
+\end{align}
+
+Since the electronic part of the wavefunction is solved in part a), the
+nuclear part is leftover,
+\begin{equation}
+  (\hat{T}_{\text{nuc}} + E_{\text{el,n}}(X))\phi_{\text{el}}(x)\phi_{\text{nuc}}(X)
+  = E_{\text{tot}}\phi_{\text{el}}(x)\phi_{\text{nuc}}(X). \label{eqn:nuc}
+\end{equation}
+Solutions of $\phi_{\text{nuc}}(X)$ for Eqn \eqref{eqn:nuc} is simply the harmonic
+oscillator wavefunctions. Similarly, in part a), the computation of $E_{\nu}$ for
+quantum number of proton vibrations $\nu=0$ is shown,
+\begin{align}
+  \phi_{\text{nuc},0}(X) & = \Bigg(\frac{m\omega_{\text{nuc}}}{\pi}\Bigg)^{\frac{1}{4}}
+  e^{-m\omega_{\text{nuc}}X^2/2} \\
+  E_{\nu=0} & = \frac{\omega_{\text{nuc}}}{4} + \frac{3\omega^2_{\text{el}}}{4m\omega_{\text{nuc}}}.
+\end{align}
+
+For $\nu=1$, $E_{\nu=1}$ can be computed
+\begin{align}
+  \phi_{\text{nuc},1}(X) & = \Bigg(\frac{m\omega_{\text{nuc}}}{\pi}\Bigg)^{\frac{1}{4}}
+  \sqrt{2m\omega_{\text{nuc}}}\,e^{-m\omega_{\text{nuc}}X^2/2} \\
+  E_{\nu=1} & = \frac{3\omega_{\text{nuc}}}{4} + \frac{3\omega^2_{\text{el}}}{4m\omega_{\text{nuc}}}.
+\end{align}
+
+Based on these, the total energy ($E_{\nu,n}$) is,
+\begin{equation}
+  E_{\nu,n}=\Big(\nu+\frac{1}{2}\Big)\frac{\omega_{\text{nuc}}}{2}
+  + \Big(n+\frac{1}{2}\Big)\omega_{\text{el}}
+  + \frac{3\omega^2_{\text{el}}}{4m\omega_{\text{nuc}}}.
+\end{equation}
+
+\noindent c) Assume $m=25$, plot the lowest 12 levels, labeling them with their
+electronic and nuclear quantum numbers.
+\\
+
+%Given the $E_{\nu,n}$ for $m=25$,
+%\begin{equation}
+%  E_{\nu,n} = \Big(\nu+\frac{1}{2}\Big)\frac{\omega_{\text{nuc}}}{2}
+%  + \Big(n+\frac{1}{2}\Big)\omega_{\text{el}}
+%  + \frac{3\omega^2_{\text{el}}}{100\omega_{\text{nuc}}}.
+%\end{equation}
+
+From earlier, $\omega_{\text{el}}=\sqrt{2}$ which means that $k=2$. We
+can define $\omega_{\text{nuc}}=\sqrt{k/m}=\sqrt{2/m}$. The energy state $(\nu,n)$
+is given by,
+\begin{align}
+  E_{\nu,n} & = \Big(\nu+\frac{1}{2}\Big)\frac{\sqrt{2}}{2\sqrt{m}}
+  + \Big(n+\frac{1}{2}\Big)\sqrt{2}
+  + \frac{3\sqrt{2}}{4\sqrt{m}} \nonumber\\
+  & = \Big(\nu + 2\Big)\frac{\sqrt{2}}{2\sqrt{m}}
+  + \Big(n+\frac{1}{2}\Big)\sqrt{2}
+\end{align}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.7]{energy_levels.eps}
+  \caption{Computed total energy levels ($E_{\nu,n}$) for given nuclear
+    and electronic quantum numbers $(\nu,n)$. The first 11 nuclear states
+    ($\nu$) are plotted at given $n$.}
+  \label{fig:E_levels}
+\end{figure}
+
+\begin{table}[H]
+  \centering
+  \caption{Reported total energy in Hartree ($E_{\nu,n}$) for given nuclear and electronic
+    quantum numbers $(\nu,n)$.}
+  \begin{tabular}{c|cc}
+    \diagbox{$\nu$}{$n$} & 0 & 1 \\
+    \hline \\
+    0 & 0.990 & 2.404 \\
+    1 & 1.131 & 2.546 \\
+    2 & 1.273 & 2.687 \\
+    3 & 1.414 & 2.828 \\ 
+    4 & 1.556 & 2.970 \\ 
+    5 & 1.697 & 3.111 \\ 
+    6 & 1.838 & 3.253 \\ 
+    7 & 1.980 & 3.394 \\ 
+    8 & 2.121 & 3.536 \\ 
+    9 & 2.263 & 3.677 \\ 
+   10 & 2.404 & 3.818
+  \end{tabular}
+\end{table}
+
+    
+
+\end{document}
