@@ -726,8 +726,124 @@ Plot all quantities on the same plots as before, and explain all differences.
 Calculate bond length and depth.
 Compare with exact answers (google or NIST).
 
+\newpage
+\sec{H$_2$}
+
+a) Plot the HF binding energy of H$_2$, approximating the Hartree energy as $U_H=\frac{5\gamma}{8} (1+\exp(-x/4))$,
+using the HF energy $E=2\epsilon + U_H/2$, and using the same $\gamma$ as in H$_2^+$.
+
+b) Find the equilibrium bond distance and well-depth from your curve.  Compare with the accurate HF values
+and comment.
+
+c) Estimate the effective force constant and hence harmonic vibrational frequency and compare with exact
+value.  Comment on what this means about the error in the shape of the curve.
+
+d) Plot the Morse potential corresponding to H$_2$ on the same plot.  Plot their difference near the 
+equilibrium bond length.  This would be the correlation energy if both curves were accurate.  
+The correlation energy at equilibrium is -0.042H.   Compare with the He atom.
+Comment on the variation of $E\c$ with $R$ and what this means for HF errors in bond lengths.
+
+e) Consider your curve as $R\to\infty$.  What value is it approaching?  Is this correct?  If not,
+why not?  What should differ in your energy expression?
+
 
 \newpage
+\sec{Analyzing experimental numbers on diatomic isotopes}
+
+This problem uses the first three rows of Table 7.2 of BRR.  Ignore the last two columns
+($B$ and $\alpha_e$) which refer to rotations.  You will want to type the rest into 
+some software, such as excel.  Do all calculations in Hartree.
+
+a) Just by staring at the numbers, can you spot two (large) typos in the table?  One has
+a wrong digit, another has a misplaced decimal point.  Correct them.
+Check the reduced mass results and convert into atomic units.
+
+b) Given the results for $\nu_e$, $x_e$ and $y_e$, calculate the zero-point energy
+in each well. 
+
+c) Add your zero-point energies to each $D_0$ to estimate $D_e$.   What should you find,
+and do you find it?
+
+d) Calculate the force constant for each well.   What should you find, and do you find it?
+
+e) Using the spectroscopic formula for the energies, how many vibrational levels do you
+expect each well to bind?
+
+f) Repeat (e) assuming each well was purely parabolic.
+
+g) For H$_2$ only, plot the harmonic levels and the true levels.
+
+h) Make the row of numbers for T$_2$.
+
+\newpage
+
+\sec{Theoretical approach to diatomic vibrations}
+
+The energy levels of a Morse potential $V_0(\exp(-2\alpha (R-R_0)) -2 \exp(-\alpha (R-R_0)))$
+are 
+\ben
+\epsilon_n = -V_0\, \left( 1 - \frac{\alpha (n+\half)}{\sqrt{2\, \mu\, V_0}} \right)^2
+\een
+where $n$ takes all integer values from 0 up to where the term in brackets 
+becomes negative, and $\mu$ is the mass.
+
+a) Find the minimum position and well-depth, and so relate $V_0$ and $R_0$ to quantities
+in molecular binding curves (if they had this shape).
+
+b) Expand the Morse potential around its minimum, and so find a formula for $\alpha$
+in terms of the harmonic approximation to a molecular well.
+
+c) Deduce expressions for $x_e$ and $y_e$ for this well, in terms of the molecular properties.
+
+d) From your expression for $x_e$, find a combination of $D$, $x_e$, and $\nu_e$ that should be
+mass independent, and use the data to check if it is.  Compare with Morse result and comment.
+
+e) How many levels does your Morse potential predict for H$_2$?  Compare with the
+perturbative answer and the harmonic approximation and comment.
+
+f) Add the Morse levels to your plot of H$_2$ levels, and compare with true levels.
+
+
+\newpage
+
+\sec{General problems about diatomics from BRR}
+
+\benu
+\item
+{\em Ionic bonds:} Use Table 7.3 to deduce the values of B and rho used in Eq (7.43).
+Are they reasonable?
+How might you have found them without reverse
+engineering?
+Is the agreement between calculation and experiment
+accurate enough by modern quantum chemistry standards?
+Identify which components of a KS calculation are being approximated
+by the separate terms in  Eq(7.44).
+
+\item
+{\em Homonuclear diatomics:}
+Use Fig 7.14 to identify the error in a configuration in Table 7.5.
+Explain the labelling of the excited states in Table 7.6.
+
+\item
+{\em Electronegativity:}
+Read 7.7 and explain the spelling error in FONClBrISCHP.
+
+\item
+{\em Potential energy surfaces:}
+Read 7.8 and explain the Massey criterion.  When can curves cross
+and when do they not?  If curves do not cross, can molecules change
+PES?
+
+\item
+{\em Hydrides and isoelectronic series:}
+Read 7.9 and explain what is special about diatomic hydrides.
+Explain how hydrogen bonding upsets trends in boiling point data.
+Do problem 7.20.
+
+
+\enu
+\newpage
+
 
 \part{Electronic stucture theory}
 \label{page:end}
