@@ -12,6 +12,7 @@
 \usepackage{array}
 \usepackage{mathtools}
 \usepackage{diagbox}
+\usepackage{gensymb}
 
 \title{Chem231B: Hw 4} % Title of the assignment
 
@@ -172,6 +173,108 @@ is given by,
   \end{tabular}
 \end{table}
 
-    
+\pagebreak
 
+\section*{General Problems about Diatomics from BRR}
+
+  1. \textit{Ionic bonds:} Use Table 7.3 to deduce the values of B and $\rho$ used in
+  Eq (7.43). Are they reasonable? How might you have found them without reverse engineering?
+  Is the agreement between calculation and experiment accurate enough by quantum chemistry
+  standards? Identify which components of a KS calculation are being approximated by the
+  separate terms in Eq (7.44).
+
+  \begin{equation}
+    V_{\text{rep}}(R) = Be^{-R/\rho}
+    \label{eqn:born_mayer}
+  \end{equation}
+
+  Reverse engineering the data requires looking up the $\alpha_i$ polarizability
+  of the $i$-th ion from doi:10.1063/1.1679747. Once obtaining those values, the
+  ``ionic dissociation energy'' can be computed and an exponential fit can be
+  arranged via mathematica. The constants $B$ and $\rho$ are XX and XX, respectively.
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{fit}
+    \caption{Exponential fit for the Born--Mayer potential to determine $B$ and
+      $\rho$ from Eqn. \eqref{eqn:born_mayer}}
+    \label{fig:fit}
+  \end{figure}
+  
+  \begin{table}[H]
+    \centering
+    \caption{Ionic Bond Model and absolute difference between experiment and calculated
+      in eV.}
+    \begin{tabular}{cccc}
+      Molecule & Calc. & Obs. & Diff \\
+      \hline
+      LiF  & 7.9996 & 7.983 & 0.017 \\
+      LiCl & 6.513  & 6.648 & 0.135 \\
+      NaCl & 5.616  & 5.750 & 0.134 \\
+      KF   & 5.993  & 6.036 & 0.043 \\
+      KI   & 4.458  & 4.601 & 0.143 \\
+      RbCl & 4.835  & 4.917 & 0.082 \\
+      CsCl & 4.692  & 4.870 & 0.178
+    \end{tabular}
+  \end{table}
+  
+  The error can be up to $\sim 0.2$ eV, or $\sim 3$ kcal/mol. It is fairly good for smaller
+  ions within chemical accuracy of $\sim 1$ kcal/mol. However, the model does not do ``well''
+  for large ions where errors can reach up to $\sim 3$ kcal/mol based on quantum chemistry
+  standards.
+  \\
+  \\
+  \noindent2. \textit{Homonuclear diatomics:} Use Fig 7.14 to identify the error in a configuration
+  in Table 7.5. Explain the labeling of the excited states in Table 7.6.
+  \\
+
+  According to Fig 7.14, the molecular orbital configuration of N$_2$ is incorrect and it
+  should be:
+
+  N$_2$: KK$(2\sigma_g)^2(2\sigma_u)^2(3\sigma_g)^2(1\pi_u)^4$
+  \\
+  
+  Molecular term symbols are defined
+  \begin{equation*}
+    ^{2S+1}|\Lambda|_{(g/u)}^{(+/-)}
+  \end{equation*}
+  \noindent where $S$ is the total spin angular momentum, $\Lambda$ is the total orbital
+  angular momentum, $g/u$ corrpondes to symmetry of the electronic wavefunction with repect
+  to inversion through this center, and $+/-$ applies only to $\Sigma$ states labeling
+  symmetry of the wavefunction with respect to the reflection in a plane containing the
+  nuclei. 
+  \\
+  \\
+  \noindent3. \textit{Electronegativity:} Read 7.7 and explain the spelling error in FONClBrISCHP.
+  \\
+  
+  Based on the Pauling scale, FONClBrISCHP has the incorrect order from most to least electronegative
+  atoms. The correct order is FOClNBrISCHP.
+  \\
+  
+  \noindent4. \textit{Potential energy surfaces:} Read 7.8 and explain the Massey criterion.
+  When can curves cross and when do they not? If curves do not cross, can molecules change
+  PES?
+  \\
+  
+  The Massey adiabatic criterion is the transition period ($\Delta t$) at which the molecule
+  on one potential energy surface (PES) encounters another PES within $\Delta E$ over a range
+  $\Delta R$. Yes, the molecule can change PES if the curves do not cross e.g. phosphorescence.
+  \\
+  \\
+  \noindent5. \textit{Hydrides and isoelectronic series:} Read 7.9 and explain what is special
+  about diatomic hydrides. Explain how hydrogen bonding upsets trends in boiling point
+  data. Do problem 7.20.
+  \\
+  
+  Nearly all diatomic hydrides in the first row are highly reative species that are
+  observed mainly in high-temperature systems. Certain trends follow such as strength
+  of bonding indicated by increasing $D_e$, shortening bond distances $R_e$, and
+  increasing vibrational frequency $\tilde{v}_e$ from LiH to HF. Typo on pg 220, the
+  boiling trends where H$_2$O boiling point is written 0.0$^{\circ}$C but, H$_2$O boils
+  at 100$^{\circ}$C.  
+  \\
+  
+  Problem 7.20) Predict dissociation energy, equilibrium internuclear distance,
+  and vibration frequency $\tilde{v}_e$ by extrapolation from the data in Table 7.9.
 \end{document}
