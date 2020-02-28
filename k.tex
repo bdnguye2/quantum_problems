@@ -694,7 +694,7 @@ c) Assuming $m=25$, plot the lowest 12 levels, labelling them with their electro
 and nuclear quantum numbers.
 
 d) The exact solution to this problem is given by the sum of two harmonic oscillators, with frequencies
-$$\omega_\pm = 1 +\frac{1}{m} \pm {\sqrt{1-\frac{1}{m}+\frac{1}{m^2}}}$$.
+$$\omega_\pm^2 = 1 +\frac{1}{m} \pm {\sqrt{1-\frac{1}{m}+\frac{1}{m^2}}}$$.
 Show that, if $m>>1$, this agrees with your BO solutions above.
 
 e) Plot the exact energy levels and compare with the BO solution. Plot the errors
@@ -730,7 +730,7 @@ Compare with exact answers (google or NIST).
 \sec{H$_2$}
 
 a) Plot the HF binding energy of H$_2$, approximating the Hartree energy as $U_H=\frac{5\gamma}{8} (1+\exp(-x/4))$,
-using the HF energy $E=2\epsilon + U_H/2$, and using the same $\gamma$ as in H$_2^+$.
+using the HF energy $E=2\epsilon + U_H/2$, and using the same optimum $\gamma$ as in H$_2^+$.
 
 b) Find the equilibrium bond distance and well-depth from your curve.  Compare with the accurate HF values
 and comment.
@@ -846,6 +846,69 @@ Do problem 7.20.
 
 
 \part{Electronic stucture theory}
+\newpage
+
+\sec{Particles in a box via DFT}
+
+a) Write down the exact energies of the first three levels of the particle in a box of
+length 1, the sums of these energies for 1, 2, and 3 levels, plot the wavefunctions
+for each level, and plot the densities for 1, 2, and 3 same-spin fermions in the box.
+
+b) Solve the Euler-Lagrange equation with the TF approximation to the kinetic energy
+to find the relation between $N$ and $\mu$.  Solve for the mininimizing density, and
+plot it on your density plots.  Comment on the errors made by this approximate density,
+and how the error behaves as $N$ grows.  Calculate the integral of $n^2(x)$ for $N=1,2,3$,
+both exactly and approximately and comment as $N$ grows.
+
+c) Make a table of the exact and approximate kinetic energies for each $N$ and report the
+percentage error.  Comment on the absolute error and percent error as $N$ grows.
+
+d) Now calculate the TF kinetic energy on the exact densities and add the results to the
+table, including errors and comment as $N$ grows.   What do you conclude is the main 
+source of error in the self-consistent TF calculation?
+
+e) Remake your table to report eigenvalues, by calculating the difference between having
+$N$ and $N-1$ particles in the box, and calculate errors for both self-consistent TF and
+TF on exact densities.
+
+f) Deduce formulas for $E_N$ for the exact and two approximate sets of numbers, and then
+add $N=100$ to your table.   What aspect of the formulas show that TF becomes relatively
+exact as $N$ gets large?  (Hint:  In every case, the formulas are cubic polynomials in $N$
+with no constant term (why?) whose coefficients could be found by fitting to 3 values of $N$.)
+
+\newpage
+
+\sec{Harmonic oscillators in DFT}
+
+a) For the harmonic oscillator $v(x)=x^2/2$, write the formula for the TF density in terms of
+$\mu$.
+
+b) By doing the integral between the turning points, find a formula for $N$ as a function of $\mu$.
+
+c) Get formulas for $T_N$ and $E_N$.    
+
+d) By subtracting $N-1$ from $N$, deduce a formula for the $N$-th energy level.  What is its error?
+
+e) For $N=1,2,3$, plot both the exact and the approximate densities of the harmonic well.
+Why would the phrase "getting the right answer for the wrong reason" come to mind?
+
+f) Calculate the integral of $n^2(x)$ for $N=1,2,3$ both exactly and approximately and comment
+on trends of errors with $N$.
+\newpage
+
+\sec{Morse oscillators in DFT}
+
+a) For the Morse potential given for the diatomics problem, 
+$$E^{TF}_N = - N V_0 (1-y+y^2/3)$$
+where $y=N/\alpha$.  Deduce a formula for individual eigenvalues.
+
+b) For your parameters for H$_2$ modelled as a Morse potential. 
+list the exact and approximate vibrational energy levels.  Comment on where the
+largest errors are.
+
+c) What happens for D$_2$?  Does the TF result do better or worse than in H$_2$?  Does
+it depend on which eigenvalues you look at?  Why does it get better or worse?
+
 \label{page:end}
 \end{document}
 
