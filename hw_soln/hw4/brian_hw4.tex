@@ -40,54 +40,30 @@ Rearrange $V(X,x)$ and completing the square,
 \begin{align}
   V(X,x) & = \frac{1}{2}(X^2+x^2) + \frac{1}{2}(x-X)^2 \nonumber \\
   & = \frac{1}{2}X^2+\frac{1}{2}x^2 + \frac{1}{2}(x^2-2xX+X^2) \nonumber \\
-  & = X^2 + x^2 - xX + 2xX - 2xX \nonumber\\
-  & = (x - X)^2 + xX.
+  & = X^2 + x^2 - xX
 \end{align}
 
+Perform coordinate transformation by substituting in $y=x-X/2$.
 Hence, the purely electronic Hamiltonian is,
 \begin{align}
-  \hat{H}_{\text{el}} & = \hat{T}_{\text{el}} + V(X,x) \nonumber\\
-  & = \frac{p_x^2}{2} + \frac{1}{2}\omega_{\text{el}}^2(x - X)^2 + xX, \label{eqn:omega}
+  V(X,y) & = y^2 + xX - xX - \frac{X^2}{4} + X^2 \nonumber\\
+  & = y^2 + \frac{3X^2}{4} \\
+  \hat{H}_{\text{el}} & = \hat{T}_{\text{el}} + V(X,y) \nonumber\\
+  & = \frac{p_y^2}{2} + y^2 +\frac{3X^2}{4}, \label{eqn:omega}
 \end{align}
 
-where $p_x$ is electronic momentum operator and $\omega_{\text{el}}$ is the vibrational
-frequency. The Sch\"odinger equation for the electronic part,
+where $p_y$ is electronic momentum operator. The Sch\"odinger equation
+for the electronic part,
 \begin{align}
   \hat{H}_{\text{el}}\phi_{\text{el}}(x) & = E_{\text{el,n}}\phi_{\text{el}}(x) \\
-  \Big(\frac{p_x^2}{2} + \frac{1}{2}\omega_{\text{el}}^2(x - X)^2 + xX\Big)\phi_{\text{el}}(x)
-  & =E_{\text{el,n}}(X)\phi_{\text{el}}(x). \label{eqn:elec}
+  \Big(\frac{p_y^2}{2} + y^2 -\frac{3X^2}{4}\Big)\phi_{\text{el}}(x)
+  & =E_{\text{el,n}}(X)\phi_{\text{el}}(x). \label{eqn:elec} \\
+  E_{\text{el,n}}(X) & = \Big(n + \frac{1}{2}\Big)\omega_{\text{el}}
+  + \frac{3X^2}{4}
 \end{align}
 
-This looks like the harmonic oscillator problem but with an additional
-coupled $xX$ term and proton position $X$ in the $(x-X)^2$ term.
-The harmonic oscillator wavefunctions are solutions to Eqn \eqref{eqn:elec}.
-Throughout this part, $\omega_{\text{el}}$ will be used. The energy levels
-$E_{\text{el,n}}(X)$ are determined for $n=0,1$ and then generalized to $n$
-levels. At $n=0$,
-\begin{align}
-  \phi_{\text{el,0}}(x) & = \Big(\frac{\omega_{\text{el}}}{\pi}\Big)^{\frac{1}{4}}
-  e^{-\omega_{\text{el}}x^2/2} \\
-  E_{\text{el,0}} & = \langle \hat{T}_{\text{el}}\rangle + \langle V(X,x) \rangle \nonumber \\
-  & = \frac{\omega_{\text{el}}}{4} + \frac{\omega_{\text{el}}^2X^2}{2}
-  + \frac{\omega_{\text{el}}}{4}\nonumber \\
-  & = \frac{\omega_{\text{el}}}{2} + \frac{\omega_{\text{el}}^2X^2}{2}
-\end{align}
-
-Repeat for $n=1$,
-\begin{align}
-  \phi_{\text{el,1}}(x) & = \Bigg(\frac{\omega_{\text{el}}}{\pi}\Bigg)^{\frac{1}{4}}
-  \sqrt{2\omega_{\text{el}}}\,e^{-\omega_{\text{el}}x^2/2} \\
-  E_{\text{el,1}} & = \frac{3\omega_{\text{el}}}{2} +\frac{\omega_{\text{el}}^2X^2}{2}.
-\end{align}
-
-Since $\omega_{\text{el}}=\sqrt{2}$ from Eqn \eqref{eqn:omega}, the electronic
-energy will be
-\begin{align}
-  E_{\text{el,n}}(X) & =\Bigg(n+\frac{1}{2}\Bigg)\omega_{\text{el}}
-  + \frac{\omega_{\text{el}}^2X^2}{2} \nonumber \\
-  & = \Bigg(n+\frac{1}{2}\Bigg)\sqrt{2} + X^2
-\end{align}
-}
+$\omega_{el}$ is determined to be $\sqrt{2}$.}
+\\
 
 \noindent b) Write the nuclear equation for the proton in the field of the
 electronic energy plus any other parts of the potential, to get an expression
@@ -96,91 +72,86 @@ number for proton vibrations.
 \\
 
 {\color{blue}
-
 Since the electronic part of the wavefunction is solved in part a), the
 nuclear part is left,
-\begin{equation}
+\begin{align}
   (\hat{T}_{\text{nuc}} + E_{\text{el,n}}(X))\phi_{\text{nuc}}(X)
-  = E_{\text{tot}}\phi_{\text{nuc}}(X). \label{eqn:nuc}
-\end{equation}
-%Solutions of $\phi_{\text{nuc}}(X)$ for Eqn \eqref{eqn:nuc} is simply the harmonic
-%oscillator wavefunctions. Similarly, in part a), the computation of $E_{\nu}$ for
-%quantum number of proton vibrations $\nu=0$ is shown,
-%\begin{align}
-%  \phi_{\text{nuc},0}(X) & = \Bigg(\frac{m_p\omega_{\text{nuc}}}{\pi}\Bigg)^{\frac{1}{4}}
-%  e^{-m_p\omega_{\text{nuc}}X^2/2} \\
-%  E_{\nu=0} & = \frac{\omega_{\text{nuc}}}{4} + \frac{k}{2m_p\omega_{\text{nuc}}}.
-%\end{align}
-%
-%For $\nu=1$, $E_{\nu=1}$ can be computed
-%\begin{align}
-%  \phi_{\text{nuc},1}(X) & = \Bigg(\frac{m_p\omega_{\text{nuc}}}{\pi}\Bigg)^{\frac{1}{4}}
-%  \sqrt{2m_p\omega_{\text{nuc}}}\,e^{-m_p\omega_{\text{nuc}}X^2/2} \\
-%  E_{\nu=1} & = \frac{3\omega_{\text{nuc}}}{4} + \frac{3k}{2m_p\omega_{\text{nuc}}}.
-%\end{align}
+  & = E_{\text{tot}}\phi_{\text{nuc}}(X) \label{eqn:nuc} \\
+  \Big(\frac{p_{\text{nuc}}}{2m_p} + \Big(n + \frac{1}{2}\Big)\omega_{\text{el}}
+  + \frac{3X^2}{4}\Big)\phi_{\text{nuc}}(X) & = E_{\text{tot}}\phi_{\text{nuc}}(X)
+\end{align}
 
 Since the solutions are the harmonic oscillator, the total energy
 ($E_{\nu,n}$) is,
 \begin{align}
   E_{\nu,n}& =\Big(\nu + \frac{1}{2}\Big)\omega_{\text{nuc}}
   + \Bigg(n+\frac{1}{2}\Bigg)\sqrt{2} \nonumber \\
-  & = \Big(\nu + \frac{1}{2}\Big)\sqrt{\frac{2}{m_p}}
+  & = \Big(\nu + \frac{1}{2}\Big)\sqrt{\frac{3}{2m_p}}
   + \Bigg(n+\frac{1}{2}\Bigg)\sqrt{2}
 \end{align}
-
-where substituting $\omega_{\text{nuc}}=\sqrt{\frac{2}{m_p}}.$
+where substituting $\omega_{\text{nuc}}=\sqrt{\frac{3}{2m_p}}.$
 }
 
 \noindent c) Assume $m=25$, plot the lowest 12 levels, labeling them with their
 electronic and nuclear quantum numbers.
-\\
 
 \begin{table}[H]
   \centering
-  \caption{Reported total energy in Hartree ($E_{\nu,n}$) for $m=25$, nuclear, and electronic
+  \caption{BO total energy in Hartree ($E_{\nu,n}$) for $m=25$, nuclear, and electronic
     quantum numbers $(\nu,n)$.}
   \begin{tabular}{c|cc}
-    \diagbox{$\nu$}{$n$} & 0 & 1 \\
+    \diagbox{$\nu$}{$n$} & 0 & 1\\
     \hline
-    0 & 0.849 & 2.263 \\
-    1 & 1.131 & 2.546 \\
-    2 & 1.414 & 2.828 \\
-    3 & 1.697 & 3.111 \\ 
-    4 & 1.980 & 3.394 \\ 
-    5 & 2.263 & 3.677 \\ 
-    6 & 2.546 & 3.960 \\ 
-    7 & 2.828 & 4.243 \\ 
-    8 & 3.111 & 4.525 \\ 
-    9 & 3.394 & 4.808 \\ 
-   10 & 3.677 & 5.091
+    0 & 0.830 & 2.244 \\
+    1 & 1.075 & 2.489 \\
+    2 & 1.319 & 2.734 \\
+    3 & 1.564 & 2.979 \\
+    4 & 1.809 & 3.224 \\
+    5 & 2.054 & 3.469 \\
+    6 & 2.299 & 3.713 \\
   \end{tabular}
 \end{table}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.09]{bo_exact_energy.jpg}
+  \caption{Energy spectrum of the exact and BO approximation energies
+    for the electronic states ($n$) and vibrational states ($\nu$). The mass
+    of proton is $m=25$.}
+  \label{fig:bo}
+\end{figure}
 
 \noindent d) The exact solution to this problem is given by the sum of two harmonic
 oscillators, with frequencies
 \begin{equation}
   \omega_{\pm}^2 = 1 + \frac{1}{m}\pm\sqrt{1 - \frac{1}{m} + \frac{1}{m^2}}
+  \label{eqn:omega}
 \end{equation}
 Show that, if $m >> 1$, this agree with your BO solutions above.
 \\
 
 {\color{blue}
+  Rewrite Eqn \eqref{eqn:omega}
+
+  \begin{equation}
+    1 + \frac{1}{m}\pm(1-\frac{1}{2m})\sqrt{1+\frac{3}{4(m-1/2)^2}}
+  \end{equation}
+  
 Exact solution is $E_{n',n}=\omega_+\Big(n+\frac{1}{2}\Big) + \omega_-\Big(n'+\frac{1}{2}\Big)$
 and since $m>>1$, $\omega_+$ is determined to be
 \begin{align*}
-  \omega_+^2 & = 1 + \frac{1}{m} + \sqrt{1-\frac{1}{m}+\frac{1}{m^2}} \\
-  & \approx 1 + \sqrt{\frac{m-1}{m}} \\
-  & \approx 1 + 1 \\
+%  \omega_+^2 & = 1 + \frac{1}{m} + \sqrt{1-\frac{1}{m}+\frac{1}{m^2}} \\
+%  & \approx 1 + \sqrt{\frac{m-1}{m}} \\
+%  & \approx 1 + 1 \\
   \omega_+ & \approx \sqrt{2}.
 \end{align*}
 
 For $\omega_-$,
 \begin{align*}
-  \omega_-^2 & = 1 + \frac{1}{m} - \sqrt{1-\frac{1}{m}+\frac{1}{m^2}} \\
-  & \approx 1 + \frac{1}{m} - 1 \\
-  \omega_- & \approx \frac{1}{\sqrt{m}}
+%  \omega_-^2 & = 1 + \frac{1}{m} - \sqrt{1-\frac{1}{m}+\frac{1}{m^2}} \\
+%  & \approx 1 + \frac{1}{m} - 1 \\
+  \omega_- & \approx \sqrt{\frac{3}{2m}}
 \end{align*}
-Close in agreement.
 }
 \\
 
@@ -190,38 +161,46 @@ lowest energy state? Does the accuracy depend on where you are in the spectrum?
 
 \begin{table}[H]
   \centering
-  \caption{Exact total energy of coupled harmonic oscillator in Hartree
-    ($E_{n',n}$) for $m=25$ and states $(n',n)$.}
+  \caption{Exact total energy of the sum of two harmonic oscillators in Hartree
+    ($E_{\nu,n}$) for $m=25$ and states $(\nu,n)$.}
   \begin{tabular}{c|cc}
-    \diagbox{$n'$}{$n$} & 0 & 1 \\
+    \diagbox{$\nu$}{$n$} & 0 & 1\\
     \hline
-    0 & 1.040 & 3.061 \\
-    1 & 1.099 & 3.120 \\
-    2 & 1.159 & 3.179 \\
-    3 & 1.218 & 3.239 \\ 
-    4 & 1.278 & 3.298 \\ 
-    5 & 1.337 & 3.358 \\ 
-    6 & 1.396 & 3.417 \\ 
-    7 & 1.456 & 3.476 \\ 
-    8 & 1.515 & 3.536 \\ 
-    9 & 1.574 & 3.595 \\ 
-   10 & 1.634 & 3.654
+    0 & 0.833 & 2.254 \\
+    1 & 1.076 & 2.498 \\
+    2 & 1.320 & 2.741 \\
+    3 & 1.564 & 2.985 \\
+    4 & 1.807 & 3.229 \\
+    5 & 2.051 & 3.473 \\
+    6 & 2.295 & 3.716 \\
   \end{tabular}
 \end{table}
 
 {\color{blue}
-Accuracy of BO energies depends where you are on in the spectrum. For
-instance, the lowest energy state (0,0) is an error of $\sim20\%$ and
-the next energy state (1,0) is approximately $\sim3\%$ error.
+  See Fig. \ref{fig:bo} for the exact total energy compared to the BO.
+  The BO energies are fairly accurate for the lowest energy state (0,0),
+  see Table \ref{tab:bo_err}. The
+  errors do not go higher than $0.5\%$ and the accuracy depends on the
+  nuclear vibrational state $\nu$.
 }
-\begin{figure}[H]
+
+\begin{table}[H]
   \centering
-  \includegraphics[scale=0.8]{error_bo_m25.eps}
-  \caption{Percent errors between the exact and BO approximation energies
-    for the electronic states ($n$) and vibrational states ($\nu$). The mass
-    of proton is $m=25$.}
-  \label{fig:err_bo}
-\end{figure}
+  \caption{Percent error ($\%$) between the exact and BO for given
+    state $(\nu,n)$ and $m=25$.}
+  \begin{tabular}{c|cc}
+    \diagbox{$\nu$}{$n$} & 0 & 1\\
+    \hline
+    0 & 0.361 & 0.456 \\
+    1 & 0.163 & 0.361 \\
+    2 & 0.038 & 0.283 \\
+    3 & 0.048 & 0.218 \\
+    4 & 0.111 & 0.163 \\
+    5 & 0.159 & 0.116 \\
+    6 & 0.196 & 0.074 \\
+  \end{tabular}
+  \label{tab:bo_err}
+\end{table}
 
 \noindent f) Repeat your calculation for m = 27, and comment on the errors in the
 BO states near the first electronic excitation. In particular, comment on
@@ -229,38 +208,58 @@ BO states near the first electronic excitation. In particular, comment on
 
 \begin{table}[H]
   \centering
-  \caption{Total energy of coupled proton and electron in Hartree ($E_{\nu,n}$) for $m=27$,
+  \caption{BO total energy of coupled proton and electron in Hartree ($E_{\nu,n}$) for $m=27$,
     nuclear, and electronic quantum numbers $(\nu,n)$.}
   \begin{tabular}{c|cc}
+    \diagbox{$\nu$}{$n$} & 0 & 1\\
+    \hline
+    0 & 0.825 & 2.239 \\
+    1 & 1.061 & 2.475 \\
+    2 & 1.296 & 2.711 \\
+    3 & 1.532 & 2.946 \\
+    4 & 1.768 & 3.182 \\
+    5 & 2.003 & 3.418 \\
+    6 & 2.239 & 3.653 \\
+  \end{tabular}
+\end{table}
+
+\begin{table}[H]
+  \centering
+  \caption{Exact energy of the sum of two harmonic oscillator in Hartree
+    ($E_{\nu,n}$) for $m=27$ and states $(\nu,n)$.}
+  \begin{tabular}{c|ccc}
     \diagbox{$\nu$}{$n$} & 0 & 1 \\
     \hline
-    0 & 0.843 & 2.257 \\
-    1 & 1.115 & 2.530 \\
-    2 & 1.388 & 2.802 \\
-    3 & 1.660 & 3.074 \\ 
-    4 & 1.932 & 3.346 \\ 
-    5 & 2.204 & 3.618 \\ 
-    6 & 2.476 & 3.890 \\ 
-    7 & 2.748 & 4.163 \\ 
-    8 & 3.021 & 4.707 \\ 
-    9 & 3.293 & 4.979 \\ 
-   10 & 3.565 & 5.251
+    0 & 0.828 & 2.249 \\
+    1 & 1.062 & 2.483 \\
+    2 & 1.297 & 2.718 \\
+    3 & 1.532 & 2.952 \\
+    4 & 1.766 & 3.187 \\
+    5 & 2.001 & 3.422 \\
+    6 & 2.235 & 3.656 \\
+  \end{tabular}
+\end{table}
+
+\begin{table}[H]
+  \centering
+  \caption{Percent error ($\%$) between the exact and BO for given
+    state $(\nu,n)$ and $m=27$.}
+  \begin{tabular}{c|cc}
+    \diagbox{$\nu$}{$n$} & 0 & 1\\
+    \hline
+    0 & 0.338 & 0.423 \\
+    1 & 0.159 & 0.328 \\
+    2 & 0.044 & 0.268 \\
+    3 & 0.035 & 0.209 \\
+    4 & 0.094 & 0.159 \\
+    5 & 0.138 & 0.115 \\
+    6 & 0.173 & 0.077 \\
   \end{tabular}
 \end{table}
 
 {\color{blue}
-  Within BO approximation, there are near degeneracies between the high vibrational
-  states ($\nu=5,6,7,8,9$) of the ground state ($n=0$) and the vibrational states
-  ($\nu=1,2,3,4$) of the first excited state ($n=1$).}
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[scale=0.8]{error_bo_m27.eps}
-  \caption{Percent errors between the exact and BO approximation energies
-    for the electronic states ($n$) and vibrational states ($\nu$). The mass
-    of proton is $m=27$.}
-  \label{fig:err_bo}
-\end{figure}
+  The errors of BO energies at near degeneracy e.g. states (6,0) and (0,1) are larger
+  in n=1 than n=0 state.}
 
 \pagebreak
 
@@ -317,20 +316,20 @@ those answers. Then add the nuclear repulsion and plot both energy levels. Deduc
 bond length and well-depth $D_e$ for this approximate calculation.
 
 \begin{figure}[H]
-  \centering
+  \centering 
   \includegraphics[scale=0.75]{h2_cat_curve.eps}
-  \caption{The nuclear repulsion, the bonding orbital ($\epsilon_+$), and
-    antibonding orbital energies ($\epsilon_-$) are shown as a function of
+  \caption{The ground state curve ($\epsilon_1$) and first excited
+    state curve ($\epsilon_1$) are shown as a function of
     the distance between two H nuclei ($R$).}
   \label{fig:cat_curve}
 \end{figure}
 
 {\color{blue}
-  The well-depth $D_e$ is approximately 1.0 Hartree and the bond
-  length is approximately 1.5 au.}
+  The well-depth $D_e$ is approximately 0.55 Hartree and the bond
+  length is approximately 2.5 au.}
 \\
 
-\noindent d) Repeat $(b+c)$ using $\gamma = 1 + 1/2 R$, but only for the lower curve.
+\noindent d) Repeat $(b+c)$ using $\gamma = 1 + 1/2^R$, but only for the lower curve.
 Plot all quantities on the same plots as before, and explain all differences. Calculate
 bond length and depth. Compare with exact answers (google or NIST).
 
@@ -338,10 +337,19 @@ bond length and depth. Compare with exact answers (google or NIST).
     \centering
     \includegraphics[width=0.495\textwidth]{h2_gamma.eps}
     \includegraphics[width=0.495\textwidth]{h2_gamma_curve.eps}
-    \caption{Side by side figures of the effect when $\gamma= 1 + 1/2 R$
-      on the energy curve of H$_2^+$.}
+    \caption{Side by side figures of the effect when $\gamma= 1 + 1/2^R$
+      on the $S(R)$, $H_{AA}(R)$, $H_{AB}(R)$, and energy curve of H$_2^+$ (left).
+      The ground state ($\epsilon_1$) and first excited state curves ($\epsilon_1$)
+      are shown (right).}
     \label{fig:sidebyside}
 \end{figure}
+
+{\color{blue}
+  Well-depth is approximately 0.1 Hartree and exact well-depth is 0.102 Hartree
+  (google).
+  Bond length is approximately 2.1 au and reported equilibrium bond length
+  of H$_2^+$ is $2.0\pm0.1$ (DOI: 10.1063/1.1674078).
+}
 
 \pagebreak
 
@@ -356,6 +364,238 @@ and using the same $\gamma$ as in H$_2^+$.
   \includegraphics[scale=0.75]{hf_energy.eps}
   \caption{Apprxominated HF binding energy of H$_2$ for $\gamma=1$.}
 \end{figure}
+
+\noindent b) Find the equilibrium bond distance and well-depth from your curve.
+Compare with the accurate HF values and comment.
+\\
+
+{\color{blue}
+    The well-depth is approximately 1.15 Hartree and the equilibrium bond
+    distance is approximately 1.22 au. Accurate HF values for equilibrium
+bond distance and well-depth are 1.39 au and 1.13 Hartree, respectively.}
+\\
+  
+\noindent c) Estimate the effective force constant and hence harmonic vibrational
+frequency and compare with exact value. Comment on what this means about the error
+in the shape of the curve
+\\
+
+{\color{blue}
+  Computed effective force constant $\frac{d^2E_{\text{binding}}}{dR^2}\bigg|_{R=R_e}=0.804$
+  au which is lower than the exact value 1.018 au.
+}
+\\
+
+\noindent d) Plot the Morse potential corresponding to H$_2$ on the same plot. Plot
+their difference near the equilibrium bond length. This would be the correlation
+energy if both curves were accurate. The correlation energy at equilibrium is -0.042H.
+Compare with the He atom. Comment on the variation of $E_C$ with $R$ and what this
+means for HF errors in bond lengths.
+\\
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=1]{hf_morse_comp.eps}
+  \caption{Morse potential corresponding to H$_2$ and HF binding energy
+  of H$_2$ are shown.}
+\end{figure}
+
+{\color{blue}
+  $E_C$ is smaller near the equilibrium distance ($R_e$). Anything outside $R_e$
+  then $E_C$ grows.
+}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.8]{diff_hfmorse.eps}
+  \caption{Difference between the Morse potential and HF curve of H$_2$
+    shown near the equilibrium bond length.}
+\end{figure}
+
+\noindent e) Consider your curve as $R\rightarrow\infty$. What value is it
+approaching? Is this correct? If not, why not? What should differ in your energy
+expression?
+\\
+
+{\color{blue}
+  The binding energy for H$_2$ approaches -11/16 Hartrees or -0.6875 Hartrees.}
+
+\pagebreak
+
+\section*{Analyzing Experimental Numbers on Diatomic Isotopes}
+
+This problem uses the first three rows of Table 7.2 of BRR.  Ignore the last two columns
+($B$ and $\alpha_e$) which refer to rotations.  You will want to type the rest into
+some software, such as excel.  Do all calculations in Hartree.
+\\
+
+\noindent a) Just by staring at the numbers, can you spot two (large) typos in the table? One has a
+wrong digit, another has a misplaced decimal point. Correct them. Check the reduced mass
+results and convert into atomic units.
+\\
+
+{\color{blue} Incorrect vibrational frequency for D$_2$ and equilibrium
+  bond distance of H$_2$.
+}
+\\
+
+\noindent b) Given the results for $v_e$, $x_e$ and $y_e$, calculate the zero-point
+energy in each well.
+\\
+{\color{blue} $E_{\text{vib}}(\nu)=hv_e[(\nu+\frac{1}{2})-x_e(\nu+\frac{1}{2})^2+y_e(\nu+\frac{1}{2})^3]$
+  for $\nu={0,1,...}$}
+\begin{table}[H]
+  \caption{Vibrational zero point energies (ZPE) in Hartrees}
+  \centering
+  \begin{tabular}{c|c}
+    Molecule & ZPE \\
+    \hline
+    H$_2$ & 0.00989 \\
+    HD    & 0.00858 \\
+    D$_2$ & 0.00704
+  \end{tabular}
+\end{table}
+
+\noindent c) Add your zero-point energies to each $D_0$ to estimate $D_e$. What should
+you find, and do you find it?
+\\
+\begin{table}[H]
+  \caption{Well-depth ($D_e$) in Hartrees}
+  \centering
+  \begin{tabular}{c|c}
+    Molecule & $D_e$ \\
+    \hline
+    H$_2$ & 0.174424 \\
+    HD    & 0.174423 \\
+    D$_2$ & 0.174434
+  \end{tabular}
+\end{table}
+
+{\color{blue} The estimated $D_e$ is close e.g. H$_2$ well-depth is 0.174486 Hartrees.}
+
+\noindent d) Calculate the force constant for each well. What should you find,
+and do you find it?
+
+\begin{table}[H]
+  \caption{Force constant $k$}
+  \centering
+  \begin{tabular}{c|c}
+    Molecule & $D_e$ \\
+    \hline
+    H$_2$ & 1.0184 \\
+    HD    & 1.0204 \\
+    D$_2$ & 1.0237
+  \end{tabular}
+\end{table}
+
+\noindent e) Using the spectroscopic formula for the energies, how many vibrational
+levels do you expect each well to bind?
+\\
+
+{\color{blue} Estimating with the Morse potential, the H$_2$
+  has 14 vibrational levels. This will be the same for the other
+  isotopes.
+}
+
+\noindent f) Repeat (e) assuming each well was purely parabolic.
+\\
+
+{\color{blue} 8 vibrational states for the H$_2$.}
+\\
+
+\noindent g) For H$_2$ only, plot the harmonic levels and the true levels.
+\\
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.15]{harmonic_true.png}
+\end{figure}
+
+\noindent h) Make the row of numbers for T$_2$.
+\begin{table}[H]
+  \caption{Vibrational constants for T$_2$}
+  \centering
+  \begin{tabular}{c|cc}
+    Molecule &$\mu$ (amu) & $R_e$ (Angstrom)\\
+    \hline
+    T$_2$ & 1.5 & 0.7412 \\
+  \end{tabular}
+\end{table}
+
+\pagebreak
+
+\section*{Theoretical Approach to Diatomic Vibrations}
+
+The energy levels of a Morse potential $V_0(\exp(-2\alpha (R-R_0)) -2 \exp(-\alpha (R-R_0)))$
+are
+\begin{equation}
+\epsilon_n = -V_0\, \left( 1 - \frac{\alpha (n+\frac{1}{2})}{\sqrt{2\, \mu\, V_0}} \right)^2
+\end{equation}
+where $n$ takes all integer values from 0 up to where the term in brackets
+becomes negative, and $\mu$ is the mass.
+\\
+
+\noindent a) Find the minimum position and well-depth, and so relate $V_0$ and $R_0$ to
+quantities in molecular binding curves (if they had this shape).
+\\
+
+{\color{blue} Let $R'=R-R_0$ and find the minimum of Morse potential
+  \begin{align}
+    \frac{dV(R')}{dR'} = -2\alpha V_0(e^{-2\alpha R'}-e^{-\alpha R'}) = 0.
+  \end{align}
+  Since the minimum of the Morse potential is 0 at $R'=R-R_0=0$, then $V_0=D_e$ implying
+  $R_0=R_e$.
+}
+\\
+
+\noindent b) Expand the Morse potential around its minimum, and so find a formula for $\alpha$
+in terms of the harmonic approximation to a molecular well.
+{\color{blue}
+\begin{align*}
+  V(R) & = V_0(e^{-2\alpha(R-R_0)}-2e^{-\alpha(R-R_0)}) \\
+  & = D_e(e^{-2\alpha(R')}-2e^{-\alpha(R')}) \\
+  & = D_e(1-2\alpha R' + 2\alpha^2R'^2 -2(1-\alpha R' +\frac{1}{2}\alpha^2R'^2) \\
+  & = -D_e + D_e\alpha^2R'^2 \\
+  k & = \alpha^2D_e \\
+  \alpha & = \sqrt{k/D_e}
+\end{align*}
+}
+
+\noindent c) Deduce expressions for $x_e$ and $y_e$ for this well, in terms of the molecular
+properties.
+{\color{blue}
+  \begin{align*}
+    \epsilon_n & = -D_0\, \left( 1 - \frac{\alpha (n+\frac{1}{2})}{\sqrt{2\, \mu\, D_e}} \right)^2 \\
+    & = - D_e(1 - \sqrt{\frac{2}{\mu D_e}}\alpha(n+\frac{1}{2}) +\frac{\alpha^2}{2\mu D_e}(n+\frac{1}{2})^2)\\
+    & = - D_e + \omega(n+\frac{1}{2})(1-x_e(n+\frac{1}{2})+y_e(n+\frac{1}{2})^2) \\
+    y_e & = 0 \\
+    \omega & = \sqrt{\frac{2 D_e}{\mu}}\alpha \\
+    \omega x_e & = \frac{\alpha^2}{2\mu} \\
+    x_e & = \frac{\alpha}{\sqrt{8\mu D_e}}
+  \end{align*}
+  }
+
+\noindent d) From your expression for $x_e$, find a combination of $D$, $x_e$, and $\nu_e$
+that should be mass independent, and use the data to check if it is.  Compare with
+Morse result and comment.
+\\
+
+\pagebreak
+\noindent e) How many levels does your Morse potential predict for H$_2$?  Compare with the
+perturbative answer and the harmonic approximation and comment.
+
+{\color{blue}
+  \begin{align*}
+    \epsilon_e & = -D_e[1-\frac{\omega}{2D_e}(x+\frac{1}{2})]^2 \\
+    n_{\text{max}} & = \frac{2D_e}{\omega} - \frac{1}{2} = \frac{x_e^{-1}-1}{2} = 16\times9
+  \end{align*}
+  
+  Morse predicts 16 levels and harmonic approximation predicts 8. The reality is 14.}
+\\
+
+\noindent f) Add the Morse levels to your plot of H$_2$ levels, and compare with true levels.
+\\
+
+{\color{blue} Morse potential will be close but, not perfect at higher levels.}
 
 \pagebreak
 
