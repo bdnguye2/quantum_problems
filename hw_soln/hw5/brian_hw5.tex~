@@ -1,0 +1,22 @@
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsthm} %lets us use \begin{proof}
+\usepackage{amssymb} %gives us the character \varnothing
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{braket}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{mathtools}
+
+\title{Chem231B: Assignment \#3} % Title of the assignment
+
+\begin{document}
+
+\maketitle
+
+\section*{}
+
+\end{document}
