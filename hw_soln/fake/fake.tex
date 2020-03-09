@@ -1,0 +1,196 @@
+\documentclass{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[normalem]{ulem}
+\usepackage{amsthm} %lets us use \begin{proof}
+\usepackage{amssymb} %gives us the character \varnothing
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{braket}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{mathtools}
+
+\title{Chem231B: Fake Final} % Title of the assignment
+
+\begin{document}
+
+\maketitle
+
+\section*{Applications of Quantum Mechanics}
+
+You need only do 20 questions, i.e., you can drop 2. Answer the explanation questions in complete
+sentences, and comment on nontrivial steps in any of your calculations. You might want to know:
+1 Hartree is 27.2114 eV, or 627.5 kcal/mol or 2625.2 kJ/mol. 1 eV is also 8065 cm$^{-1}$ or 11,604K.
+The Morse potential is
+\begin{equation}
+  V(R) = A(exp(-2\alpha(R-R_e))-2exp(-\alpha(R-R_e)),
+\end{equation}
+with known eigenenergies:
+\begin{equation}
+  \epsilon_n = -A(1 - \frac{\alpha(n+1/2)}{\sqrt{2m\,A}})^2
+\end{equation}
+
+\noindent a) Give the Hamiltonian for an electron in a He$^+$ ion in atomic units.
+
+{\color{blue}
+  \begin{equation}
+    \hat{H} = -\frac{\nabla^2}{2} - \frac{2}{r}
+  \end{equation}
+
+  The He$^+$ is placed at the orgin. $\nabla^2$ is the Laplacian in spherical coordinates and
+  $r$ is the position of the electron.
+}
+\\
+
+\noindent b) Give the kinetic and potential energies when the electron is in its ground state
+in the previous problem.
+\\
+
+{\color{blue} $\langle \hat{T} \rangle = 2$ Hartree and $\langle \hat{V} \rangle = -4$ Hartree.}
+\\
+
+\noindent c) Give the Hamiltonian for the electrons in H$_2$.
+
+{\color{blue}
+  \begin{align*}
+    \hat{H} & = -\sum_{i=1}^2\hat{h}(i) + \hat{V}_{\text{ee}} \\
+    \hat{h}(i) & = -\frac{\nabla_i^2}{2} - \frac{2}{|r_i-R_A\hat{z}|} -\frac{2}{|r_i - R_B\hat{z}|} \\
+    \hat{V}_{\text{ee}} & = \frac{1}{2}\sum_{i\neq j} \frac{1}{|r_i-r_j|}
+  \end{align*}
+
+  Diatomic H$_2$ molecule is placed along the $z$-axis. $\hat{h}(i)$ is the one-electron
+  operator and the $\hat{V}_{\text{ee}}$ is the two-electron operator. $r_i$ is the position
+  of the electron and $R$ is the position of the hydrogen atoms.
+}
+\\
+
+\noindent d) An electron is in a 2p state. What are the possible values of $s$, $m_s$, $l$,
+$m_l$, $j$, and $m_j$, where $\mathbf{j} = \mathbf{l} + \mathbf{s}$?
+\\
+
+{\color{blue} $s=1/2$, $m_s=\pm 1/2$, $l=1$, $m_l=\{-1,0,1\}$, $j=\{1/2,3/2\}$, and
+  $m_j = \{-3/2,-1/2,1/2,3/2\}$.
+}
+\\
+
+\noindent e) Find $[[l_x,l_y],l_z]$.
+\\
+
+{\color{blue}
+  $[l_x,l_y] = i\hbar l_z$ and therefore, $[[l_x,l_y],l_z] = 0$
+}
+\\
+
+\noindent f) How many nodes are in a 4d orbital? State which are radial, and which are
+angular.
+\\
+
+{\color{blue} There are 3 total nodes in a 4d orbital. 2 are angular nodes and 1 is a
+  radial node.
+}
+\\
+
+\noindent g) What is the degeneracy of the level with energy $-1/18$ Hartree in a H
+atom? Include spin.
+\\
+
+{\color{blue} $n=3$ and hence, there are 3s, 3p, and 3d orbitals. Considering spin,
+  the degeneracy with energy $-1/18$ Hartree in a H atom is
+  18.}
+\\
+
+\noindent h) What is the expectation value of $\langle 1/r \rangle$, as a function of
+$\zeta$, of the trial wavefunction exp$(-\zeta r)$? (Make sure you normalize.)
+\\
+
+{\color{blue} Normalized wavefunction $\frac{\zeta^{3/2}}{\sqrt{\pi}}e^{-\zeta r}$
+  and $\langle 1/r \rangle = \zeta$.
+}
+\\
+
+\noindent i) Give the value of $\langle 3,2|\hat{j}_x|3,1\rangle$.
+\\
+
+\noindent j) Give the possible states $j_1 = 1/2$, $j_2 = 1$, labeled by their total
+angular momentum and its $z$-component.
+\\
+
+\noindent k) Give the terms of the lowest configuration of C, and state which should
+be the ground-state.
+\\
+
+{\color{blue} $^3P_0$}
+\\
+
+\noindent l) In the previous question, state which levels appear due to spin orbit
+coupling.
+\\
+
+\noindent m) Write an expression for the lowest HF wavefunction of He, including both
+spatial and spin parts. How does it change when coordinates 1 and 2 are swapped?
+\\
+
+\noindent n) Esimate the electronic repulsive energy in Be$^{++}$.
+\\
+
+\noindent o) Why do HF calculations typically underestimate binding energies?
+\\
+
+{\color{blue} It is missing correlation energy.}
+\\
+
+\noindent p) State the variational principle.
+\\
+
+{\color{blue} $E_0 \leq \langle\psi|\hat{H}|\psi\rangle = E$ where $E_0$ is the exact
+  ground-state energy and $\psi$ is the ``trial wavefunction'' that can be adjusted with
+  parameters minimizing the energy $E$.
+}\\
+
+\noindent q) Use the variational principle to define the universal part of the density
+functional in DFT for the ground-state of electronic systems.
+\\
+
+\noindent r) Sketch the shapes of the overlap of two atomic 2p-orbitals perpendicular
+to the bond direction. State how many nodes, what shape the nodes are, and give the
+symmetry labels of these orbitals.
+\\
+
+\noindent s) Write the equation that determines the density for any number of same-spin
+particles in a one-dimensional potential when the local density approximation is used
+for the kinetic energy, and say how any constants are chosen.
+\\
+
+\noindent t) The vibrational frequency of LiH is 1406 cm$^{-1}$, and its dissociation
+energy is 2.43 eV. What will the dissociation energy be for LiD?
+\\
+
+\noindent u) For He$_2^+$, what is the bond order and lowest energy term?
+\\
+
+{\color{blue} Bond order of 0.5 and $^2\Sigma_g$.}
+\\
+
+\noindent v) For H$_2^+$, sketch the overlap of the atomic orbitals in a minimal basis
+calculation as a function of R, giving the value at $R=0$.
+\\
+
+\noindent w) For a particle in a cubic potential ($v(x) = C|x|^3$), what is the ratio
+of potential to kinetic energy?
+\\
+
+{\color{blue} $\langle V/T \rangle = 3/2$}
+\\
+
+\noindent x) The binding energy curve of a diatomic is often crudely approximated by a
+Lennard-Jones potential:
+\begin{equation*}
+  U(R) = U(\infty) +D\Bigg(\Bigg(\frac{R_e}{R}\Bigg)^{12} - 2\Bigg(\frac{R_e}{R}\Bigg)^6\Bigg).
+\end{equation*}
+
+Derive an expression for the electronic potential energy as a function of $R$.
+
+\end{document}

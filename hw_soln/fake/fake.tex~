@@ -1,0 +1,23 @@
+\documentclass{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsthm} %lets us use \begin{proof}
+\usepackage{amssymb} %gives us the character \varnothing
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{braket}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{mathtools}
+
+\title{Chem231B: Fake Final} % Title of the assignment
+
+\begin{document}
+
+\maketitle
+
+\section*{Applications of Quantum Mechanics}
+
+\end{document}
