@@ -12,6 +12,7 @@
 \usepackage{multirow}
 \usepackage{array}
 \usepackage{mathtools}
+\usepackage{graphicx}
 
 \title{Chem231B: Fake Final} % Title of the assignment
 
@@ -26,7 +27,7 @@ sentences, and comment on nontrivial steps in any of your calculations. You migh
 1 Hartree is 27.2114 eV, or 627.5 kcal/mol or 2625.2 kJ/mol. 1 eV is also 8065 cm$^{-1}$ or 11,604K.
 The Morse potential is
 \begin{equation}
-  V(R) = A(exp(-2\alpha(R-R_e))-2exp(-\alpha(R-R_e)),
+  V(R) = A(\text{exp}(-2\alpha(R-R_e))-2\text{exp}(-\alpha(R-R_e)),
 \end{equation}
 with known eigenenergies:
 \begin{equation}
@@ -36,9 +37,9 @@ with known eigenenergies:
 \noindent a) Give the Hamiltonian for an electron in a He$^+$ ion in atomic units.
 
 {\color{blue}
-  \begin{equation}
+  \begin{equation*}
     \hat{H} = -\frac{\nabla^2}{2} - \frac{2}{r}
-  \end{equation}
+  \end{equation*}
 
   The He$^+$ is placed at the orgin. $\nabla^2$ is the Laplacian in spherical coordinates and
   $r$ is the position of the electron.
@@ -57,7 +58,7 @@ in the previous problem.
 {\color{blue}
   \begin{align*}
     \hat{H} & = -\sum_{i=1}^2\hat{h}(i) + \hat{V}_{\text{ee}} \\
-    \hat{h}(i) & = -\frac{\nabla_i^2}{2} - \frac{2}{|r_i-R_A\hat{z}|} -\frac{2}{|r_i - R_B\hat{z}|} \\
+    \hat{h}(i) & = -\frac{\nabla_i^2}{2} - \frac{1}{|r_i-R_A\hat{z}|} -\frac{1}{|r_i - R_B\hat{z}|} \\
     \hat{V}_{\text{ee}} & = \frac{1}{2}\sum_{i\neq j} \frac{1}{|r_i-r_j|}
   \end{align*}
 
@@ -114,6 +115,9 @@ $\zeta$, of the trial wavefunction exp$(-\zeta r)$? (Make sure you normalize.)
 \noindent i) Give the value of $\langle 3,2|\hat{j}_x|3,1\rangle$.
 \\
 
+{\color{blue} $\frac{\sqrt{10}}{2}$}
+\\
+
 \noindent j) Give the possible states $j_1 = 1/2$, $j_2 = 1$, labeled by their total
 angular momentum and its $z$-component.
 \\
@@ -132,6 +136,17 @@ coupling.
 \noindent m) Write an expression for the lowest HF wavefunction of He, including both
 spatial and spin parts. How does it change when coordinates 1 and 2 are swapped?
 \\
+
+{\color{blue}
+  \begin{equation*}
+    \Psi^{\text{HF}}(x_1,x_2) = \frac{1}{\sqrt{2}}(\phi_1(x_1)
+    \alpha(x_1)\phi_2(x_2)\beta(x_2) - \phi_2(x_1)\beta(x_1)
+    \phi_1(x_2)\alpha(x_2))
+  \end{equation*}
+  
+  The spatial orbitals $\phi_1(x)$ and $\phi_2(x)$ with spin $\alpha$ and $\beta$
+  for electrons $x_1$ and $x_2$. $\Psi^{\text{HF}}(x_1,x_2) = -\Psi^{\text{HF}}(x_2,x_1)$
+}\\
 
 \noindent n) Esimate the electronic repulsive energy in Be$^{++}$.
 \\
@@ -168,6 +183,9 @@ for the kinetic energy, and say how any constants are chosen.
 energy is 2.43 eV. What will the dissociation energy be for LiD?
 \\
 
+{\color{blue} 2.50 eV}
+\\
+
 \noindent u) For He$_2^+$, what is the bond order and lowest energy term?
 \\
 
@@ -177,6 +195,13 @@ energy is 2.43 eV. What will the dissociation energy be for LiD?
 \noindent v) For H$_2^+$, sketch the overlap of the atomic orbitals in a minimal basis
 calculation as a function of R, giving the value at $R=0$.
 \\
+
+{\color{blue} At $R=0$, the overlap of the atomic orbital is 1.}
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.75]{h2.eps}
+  \label{fig:overlap}
+\end{figure}
 
 \noindent w) For a particle in a cubic potential ($v(x) = C|x|^3$), what is the ratio
 of potential to kinetic energy?
