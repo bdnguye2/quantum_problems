@@ -1,0 +1,42 @@
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsthm} %lets us use \begin{proof}
+\usepackage{amssymb} %gives us the character \varnothing
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{braket}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{mathtools}
+
+\title{Chem231B: Quiz \#3} % Title of the assignment
+
+\begin{document}
+
+\maketitle
+
+\begin{enumerate}
+\item -20 eV; singlet
+\item -12 eV; degeneracy of 1
+\item -2 eV
+\item $\Psi^{\text{HF}} = \frac{1}{\sqrt{2}}(\phi_1(x_1)
+  \alpha(x_1)\phi_2(x_2)\beta(x_2) - \phi_2(x_1)\beta(x_1)
+  \phi_1(x_2)\alpha(x_2))$ \\
+  spatial orbitals $\phi_1(x)$ and $\phi_2(x)$ with
+  spin $\alpha$ and $\beta$ for electrons $x_1$ and $x_2$
+\item $\hat{H} = \sum_i^3 - \frac{1}{2}\nabla_i^2
+  -\sum_i^3\frac{3}{|r_i-R|} + \sum_i^3\sum_{j\neq i}^3
+  \frac{1}{|r_i-r_j|}$
+\item $J = \{2,1,0\}$, $M = \{-2,-1,0,1,2\}$
+\item ???
+\item $E_{\text{IP}} = |E_N^{\text{He}} - E_{N-1}^{\text{He}}|
+  = |-79.0 + 54.4| = 24.6$ eV
+\item $1.2\%$ Error
+\item $^4S$, $^2P$, $^2D$
+\end{enumerate}
+  
+  
+  
+\end{document}
